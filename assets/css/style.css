@@ -1,0 +1,118 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-bricolage {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        /* Subtle noise texture */
+        .noise-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Starry background effect */
+        .stars {
+            background-image:
+                radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+                radial-gradient(1.5px 1.5px at 90px 40px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0)),
+                radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+            background-size: 200px 200px;
+            opacity: 0.15;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        /* Gradient mask for video */
+        .video-mask {
+            -webkit-mask-image: radial-gradient(circle, black 40%, transparent 80%);
+            mask-image: radial-gradient(circle, black 40%, transparent 80%);
+        }
+
+        /* Video glow effect */
+        .video-glow {
+            box-shadow: 0 0 120px 30px rgba(249, 115, 22, 0.15);
+            border-radius: 50%;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Initial states for GSAP */
+        .gsap-reveal {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes shimmer {
+            100% { transform: translateX(100%); }
+        }
+        @keyframes scan {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(300%); opacity: 0; }
+        }
+        @keyframes marquee-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .animate-marquee-left {
+            animation: marquee-left 35s linear infinite;
+        }
+        .animate-marquee-right {
+            animation: marquee-right 35s linear infinite;
+        }
+        .hover-pause:hover {
+            animation-play-state: paused;
+        }
+
+        /* --- Extracted from para_empresas.html --- */
+        .electric-card {
+            box-shadow: 0 0 40px rgba(249, 115, 22, 0.4), inset 0 0 20px rgba(249, 115, 22, 0.1);
+        }
+        @keyframes fadeInUpBlur {
+            0% { opacity: 0; transform: translateY(20px); filter: blur(10px); }
+            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+        .animate-entry { animation: fadeInUpBlur 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-500 { animation-delay: 500ms; }
+        
+        .smoke-anim {
+            animation: smokeMove 15s infinite alternate ease-in-out;
+        }
+        @keyframes smokeMove {
+            0% { transform: scale(1) translate(0, 0) rotate(0deg); opacity: 0.3; filter: blur(100px); }
+            50% { transform: scale(1.2) translate(50px, -50px) rotate(10deg); opacity: 0.5; filter: blur(120px); }
+            100% { transform: scale(1) translate(-50px, 50px) rotate(-10deg); opacity: 0.3; filter: blur(100px); }
+        }
