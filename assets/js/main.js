@@ -26,6 +26,14 @@
             gsap.set('.gsap-nav-item', { autoAlpha: 0, y: -20 });
             gsap.set('.gsap-video', { scale: 1.2 });
 
+            // Force play video to prevent autoplay restrictions
+            const heroVideo = document.querySelector('video.gsap-video');
+            if (heroVideo) {
+                // Ensure video is properly muted to allow autoplay
+                heroVideo.muted = true;
+                heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
+            }
+
             const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
             // Nav Animation
