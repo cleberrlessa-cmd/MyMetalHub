@@ -32,7 +32,21 @@
                 // Ensure video is properly muted to allow autoplay
                 heroVideo.muted = true;
                 heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
+
+                // Mobile fallback: force play on first interaction if blocked
+                document.body.addEventListener('touchstart', function() {
+                    if (heroVideo.paused) {
+                        heroVideo.play().catch(e => {});
+                    }
+                }, { once: true });
             }
+
+            // Handle Back/Forward Cache (bfcache) to restart animations on return
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) {
+                    window.location.reload();
+                }
+            });
 
             const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
