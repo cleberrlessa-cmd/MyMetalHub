@@ -79,12 +79,13 @@
                     ease: 'power2.out'
                 }, "-=1.5");
 
-            // Header Scroll Effect
+            // Header Scroll Effect (Smart Header)
             let lastScroll = 0;
             window.addEventListener('scroll', () => {
                 const currentScroll = window.pageYOffset;
                 const header = document.getElementById('header');
 
+                // Toggle padding based on scroll position
                 if (currentScroll > 50) {
                     header.classList.add('py-2');
                     header.classList.remove('py-4');
@@ -92,7 +93,17 @@
                     header.classList.add('py-4');
                     header.classList.remove('py-2');
                 }
-                lastScroll = currentScroll;
+
+                // Hide header on scroll down, show on scroll up (only apply after scrolling past 100px)
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    // Scrolling down - hide
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up - show
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScroll = currentScroll <= 0 ? 0 : currentScroll;
             });
 
             // Section 2 (Sobre o Curso) Scroll Animations
