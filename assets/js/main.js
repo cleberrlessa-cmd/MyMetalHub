@@ -348,3 +348,144 @@
                 }
             }
         });
+
+        // ==========================================
+        // PREMIUN COOKIE CONSENT BANNER
+        // ==========================================
+        (function() {
+            if (localStorage.getItem('mymetalhub-cookie-consent')) {
+                return;
+            }
+
+            const css = `
+                #cookie-banner {
+                    position: fixed;
+                    bottom: 24px;
+                    right: 24px;
+                    z-index: 9999;
+                    max-width: 420px;
+                    background: rgba(10, 10, 10, 0.95);
+                    backdrop-filter: blur(16px);
+                    -webkit-backdrop-filter: blur(16px);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 20px;
+                    padding: 24px;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(249, 115, 22, 0.1);
+                    transform: translateY(100px);
+                    opacity: 0;
+                    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    font-family: 'Inter', sans-serif;
+                }
+                #cookie-banner.show {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                #cookie-banner h4 {
+                    color: #ffffff;
+                    font-family: 'Bricolage Grotesque', sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin: 0 0 8px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                #cookie-banner p {
+                    color: #a3a3a3;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    margin: 0 0 18px 0;
+                    font-weight: 300;
+                }
+                #cookie-banner .cookie-actions {
+                    display: flex;
+                    gap: 12px;
+                }
+                #cookie-banner button {
+                    cursor: pointer;
+                    padding: 10px 18px;
+                    border-radius: 12px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                }
+                #cookie-banner .btn-accept {
+                    background: linear-gradient(135deg, #f97316, #ea580c);
+                    color: #ffffff;
+                    border: none;
+                    flex-grow: 2;
+                    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+                }
+                #cookie-banner .btn-accept:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+                    filter: brightness(1.1);
+                }
+                #cookie-banner .btn-reject {
+                    background: rgba(255, 255, 255, 0.05);
+                    color: #e5e5e5;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    flex-grow: 1;
+                }
+                #cookie-banner .btn-reject:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #ffffff;
+                }
+                @media (max-width: 480px) {
+                    #cookie-banner {
+                        bottom: 16px;
+                        left: 16px;
+                        right: 16px;
+                        max-width: none;
+                        padding: 20px;
+                    }
+                }
+            `;
+
+            // Inject CSS dynamically
+            const styleEl = document.createElement('style');
+            styleEl.innerHTML = css;
+            document.head.appendChild(styleEl);
+
+            // Create banner element
+            const banner = document.createElement('div');
+            banner.id = 'cookie-banner';
+            banner.innerHTML = `
+                <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5z"/>
+                        <path d="M8.5 8.5v.01"/>
+                        <path d="M16.5 15.5v.01"/>
+                        <path d="M12 18v.01"/>
+                        <path d="M11 13v.01"/>
+                        <path d="M7.5 14.5v.01"/>
+                    </svg>
+                    Controle de Cookies
+                </h4>
+                <p>Utilizamos cookies essenciais para otimizar sua experiência e analisar nosso tráfego em conformidade com as melhores práticas de privacidade e proteção de dados.</p>
+                <div class="cookie-actions">
+                    <button class="btn-reject" id="btn-cookie-reject">Recusar</button>
+                    <button class="btn-accept" id="btn-cookie-accept">Aceitar Todos</button>
+                </div>
+            `;
+
+            document.body.appendChild(banner);
+
+            // Show banner with a smooth delay
+            setTimeout(() => {
+                banner.classList.add('show');
+            }, 1500);
+
+            // Event listeners
+            document.getElementById('btn-cookie-accept').addEventListener('click', () => {
+                localStorage.setItem('mymetalhub-cookie-consent', 'accepted');
+                banner.classList.remove('show');
+                setTimeout(() => banner.remove(), 600);
+            });
+
+            document.getElementById('btn-cookie-reject').addEventListener('click', () => {
+                localStorage.setItem('mymetalhub-cookie-consent', 'rejected');
+                banner.classList.remove('show');
+                setTimeout(() => banner.remove(), 600);
+            });
+        })();
