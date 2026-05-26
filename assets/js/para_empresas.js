@@ -156,6 +156,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mask for Phone Number: +XX (XX) XXXXX-XXXX
+    const phoneInput = document.getElementById('modal-phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value;
+            // Always keep '+' as starting character
+            let digits = value.replace(/\D/g, '');
+            
+            let formatted = '';
+            if (digits.length > 0) {
+                formatted += '+' + digits.substring(0, 2);
+            }
+            if (digits.length > 2) {
+                formatted += ' (' + digits.substring(2, 4);
+            }
+            if (digits.length > 4) {
+                if (digits.length > 9) {
+                    formatted += ') ' + digits.substring(4, 9) + '-' + digits.substring(9, 14);
+                } else {
+                    formatted += ') ' + digits.substring(4, 9);
+                }
+            }
+            
+            e.target.value = formatted;
+        });
+    }
+
     // Form submission
     const formContainer = document.getElementById('modal-form-container');
     const successContainer = document.getElementById('modal-success-container');
