@@ -224,6 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const titleVal = titleInput.value.trim();
+            const emailVal = document.getElementById('modal-email')?.value.trim() || '';
+            const phoneVal = document.getElementById('modal-phone')?.value.trim() || '';
             const messageVal = messageInput.value.trim();
             
             if (submitBtn) {
@@ -233,17 +235,54 @@ document.addEventListener('DOMContentLoaded', () => {
             if (submitText) submitText.textContent = 'Enviando...';
             if (submitIcon) submitIcon.classList.add('hidden');
             
-            // Simula o processamento do envio assíncrono (Web3Forms, Formspree, etc.)
-            setTimeout(() => {
-                if (submittedSubjectSpan) {
-                    submittedSubjectSpan.textContent = titleVal;
+            // Envia para o Web3Forms de verdade
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: 'e0b0e866-255f-4391-92cc-34218723ac05',
+                    subject: `Novo Contato Especialista: ${titleVal}`,
+                    from_name: 'MyMetalHub Empresas',
+                    email: emailVal,
+                    phone: phoneVal,
+                    message: messageVal,
+                    title: titleVal
+                })
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    if (submittedSubjectSpan) {
+                        submittedSubjectSpan.textContent = titleVal;
+                    }
+                    if (formContainer && successContainer) {
+                        formContainer.classList.add('hidden');
+                        successContainer.classList.remove('hidden');
+                    }
+                } else {
+                    console.log(response);
+                    alert(json.message || 'Erro ao enviar. Tente novamente mais tarde.');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.style.opacity = '1';
+                    }
+                    if (submitText) submitText.textContent = 'Enviar Mensagem';
+                    if (submitIcon) submitIcon.classList.remove('hidden');
                 }
-                
-                if (formContainer && successContainer) {
-                    formContainer.classList.add('hidden');
-                    successContainer.classList.remove('hidden');
+            })
+            .catch(error => {
+                console.log(error);
+                alert('Erro de conexão. Verifique sua rede e tente novamente.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
                 }
-            }, 1200);
+                if (submitText) submitText.textContent = 'Enviar Mensagem';
+                if (submitIcon) submitIcon.classList.remove('hidden');
+            });
         });
     }
 });
