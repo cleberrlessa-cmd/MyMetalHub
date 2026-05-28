@@ -26,19 +26,28 @@
             gsap.set('.gsap-nav-item', { autoAlpha: 0, y: -20 });
             gsap.set('.gsap-video', { scale: 1.2 });
 
-            // Force play video to prevent autoplay restrictions
+            // Force play video to prevent autoplay restrictions (highly optimized for mobile/Safari)
             const heroVideo = document.querySelector('video.gsap-video');
             if (heroVideo) {
                 // Ensure video is properly muted to allow autoplay
                 heroVideo.muted = true;
-                heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
-
-                // Mobile fallback: force play on first interaction if blocked
-                document.body.addEventListener('touchstart', function() {
+                
+                const playVideo = () => {
                     if (heroVideo.paused) {
-                        heroVideo.play().catch(e => {});
+                        heroVideo.play().catch(e => console.log('Autoplay play attempt skipped/prevented:', e));
                     }
-                }, { once: true });
+                };
+
+                // Staggered attempts to bypass potential race conditions during GSAP initialization
+                playVideo();
+                setTimeout(playVideo, 100);
+                setTimeout(playVideo, 500);
+                setTimeout(playVideo, 1200);
+
+                // Mobile fallback: force play on first user interaction with the window
+                ['touchstart', 'touchend', 'click', 'scroll', 'keydown'].forEach(eventName => {
+                    window.addEventListener(eventName, playVideo, { once: true, passive: true });
+                });
             }
 
             // Handle Back/Forward Cache (bfcache) to restart animations on return
