@@ -291,6 +291,22 @@
                 );
             }
 
+            // Section Fundamentos Animations (Sobre Nós)
+            if (document.getElementById('fundamentos')) {
+                const fundTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#fundamentos",
+                        start: "top 75%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+
+                fundTl.fromTo(".gsap-fund-stagger",
+                    { y: 50, autoAlpha: 0, filter: 'blur(8px)' },
+                    { y: 0, autoAlpha: 1, filter: 'blur(0px)', duration: 1, stagger: 0.15, ease: "power3.out" }
+                );
+            }
+
             // FAQ Accordion Logic
             const faqItems = document.querySelectorAll('.faq-item');
             if (faqItems.length > 0) {
