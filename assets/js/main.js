@@ -275,6 +275,22 @@
                 "-=0.6"
             );
 
+            // Sobre Nós - Content Animation
+            if (document.getElementById('sobre-conteudo')) {
+                const sobreTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#sobre-conteudo",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+
+                sobreTl.fromTo("#sobre-conteudo > *",
+                    { y: 40, autoAlpha: 0, filter: 'blur(10px)' },
+                    { y: 0, autoAlpha: 1, filter: 'blur(0px)', duration: 1, stagger: 0.15, ease: "power3.out" }
+                );
+            }
+
             // FAQ Accordion Logic
             const faqItems = document.querySelectorAll('.faq-item');
             if (faqItems.length > 0) {
