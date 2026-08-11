@@ -67,15 +67,97 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <main class="relative z-10 min-h-screen flex items-center pt-36 md:pt-24 pb-12">
+    <!-- Countdown Section (Acima da Hero - Tela Suspensa com Espaçamento) -->
+    <section id="hero-countdown-banner" class="relative z-20 min-h-[calc(100vh-90px)] flex items-center justify-center pt-24 pb-12 max-w-7xl mx-auto px-6 w-full gsap-reveal hero-stagger">
+        <div class="p-6 md:p-10 rounded-3xl bg-gradient-to-br from-neutral-950 via-[#1a0e06] to-neutral-950 border-2 border-orange-500/40 backdrop-blur-xl shadow-[0_0_60px_-10px_rgba(249,115,22,0.4)] relative overflow-hidden group w-full">
+            <!-- Ember & Crucible Glow Effects -->
+            <div class="absolute -top-16 -right-16 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-orange-500/30 transition-all duration-700"></div>
+            <div class="absolute -bottom-16 -left-16 w-56 h-56 bg-yellow-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
+
+            <!-- Top Status Badge -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-6 border-b border-white/10 pb-4">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-xs md:text-sm font-semibold text-orange-400 uppercase tracking-widest">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
+                    </span>
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+                    </svg>
+                    <span>Lançamento Oficial</span>
+                </div>
+                <div class="text-xs md:text-sm font-mono font-medium text-neutral-200 bg-white/10 border border-white/15 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-inner">
+                    <svg class="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>10 DE SETEMBRO DE 2026 • 11:00</span>
+                </div>
+            </div>
+
+            <!-- Main High-Impact Headline (Mesma fonte Bricolage Grotesque e degradê do H1) -->
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bricolage font-light text-white tracking-tight leading-[1.12] mb-8 text-center max-w-5xl mx-auto">
+                A Metalurgia é a base da Engenharia.
+                <br class="hidden sm:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-orange-400 to-orange-500 font-medium">
+                    O próximo nível do conhecimento em Fundição
+                </span>
+                está chegando.
+            </h2>
+
+            <!-- Countdown Timer Grid (Números Grandes e Destacados) -->
+            <div class="grid grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto text-center">
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-3 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors">
+                    <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight" id="timer-days">00</div>
+                    <div class="text-[10px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-widest mt-1">Dias</div>
+                </div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-3 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors">
+                    <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight" id="timer-hours">00</div>
+                    <div class="text-[10px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-widest mt-1">Horas</div>
+                </div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-3 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors">
+                    <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight" id="timer-minutes">00</div>
+                    <div class="text-[10px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-widest mt-1">Minutos</div>
+                </div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-3 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors">
+                    <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 via-orange-400 to-orange-500 tracking-tight" id="timer-seconds">00</div>
+                    <div class="text-[10px] sm:text-xs md:text-sm text-orange-400 font-sans uppercase font-semibold tracking-widest mt-1">Segundos</div>
+                </div>
+            </div>
+
+            <!-- Disruptive High-Impact Launch Badge (Abaixo do relógio) -->
+            <div class="mt-8 md:mt-10 flex justify-center">
+                <div class="relative group/launch inline-flex items-center gap-3 px-6 md:px-10 py-3.5 md:py-4 rounded-full bg-gradient-to-r from-orange-950/90 via-black/95 to-orange-950/90 border-2 border-orange-500/60 shadow-[0_0_40px_rgba(249,115,22,0.5)] backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:shadow-[0_0_60px_rgba(249,115,22,0.8)] hover:scale-105">
+                    <!-- Glowing animated background pulse -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500/20 via-yellow-500/20 to-orange-500/20 opacity-75 blur-md animate-pulse pointer-events-none"></div>
+                    
+                    <!-- Spark / Flame Icon -->
+                    <div class="relative flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-gradient-to-br from-orange-500/30 to-yellow-500/20 border border-orange-400/50 text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.7)] shrink-0">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 text-yellow-300 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Text content -->
+                    <span class="relative text-xs sm:text-sm md:text-lg font-sans font-semibold uppercase tracking-[0.22em] text-white whitespace-nowrap">
+                        Lançamento da Plataforma <span class="font-bricolage font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-orange-400 to-orange-500">MyMetal<span class="text-[#FF8128]">Hub</span></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section (Com espaçamento adequado para aparecer somente ao rolar) -->
+    <main id="hero-main" class="relative z-10 min-h-screen flex items-center pt-24 md:pt-32 pb-24">
         <div class="max-w-7xl mx-auto px-6 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
                 <!-- Left Content -->
                 <div class="lg:col-span-6 flex flex-col relative z-20 order-1">
                     <div
-                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-orange-500/20 bg-orange-500/10 backdrop-blur-sm text-xs text-orange-400 mb-8 w-max gsap-reveal hero-stagger">
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-orange-500/20 bg-orange-500/10 backdrop-blur-sm text-xs text-orange-400 mb-8 w-max gsap-reveal hero-scroll-stagger">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,7 +168,7 @@
                     </div>
 
                     <h1
-                        class="text-5xl md:text-6xl lg:text-[72px] leading-[1.05] text-white mb-6 font-bricolage font-light tracking-tight gsap-reveal hero-stagger">
+                        class="text-5xl md:text-6xl lg:text-[72px] leading-[1.05] text-white mb-6 font-bricolage font-light tracking-tight gsap-reveal hero-scroll-stagger">
                         Domine a ciência e
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-orange-400 to-orange-500 font-medium">as
@@ -95,12 +177,12 @@
                     </h1>
 
                     <p
-                        class="text-lg md:text-xl text-neutral-400 max-w-xl mb-10 leading-relaxed font-sans gsap-reveal hero-stagger">
+                        class="text-lg md:text-xl text-neutral-400 max-w-xl mb-10 leading-relaxed font-sans gsap-reveal hero-scroll-stagger">
                         Uma plataforma premium de cursos de metalurgia. Aprenda técnicas avançadas com a melhor
                         qualidade visual e didática.
                     </p>
 
-                    <div class="flex flex-wrap gap-4 items-center gsap-reveal hero-stagger">
+                    <div class="flex flex-wrap gap-4 items-center gsap-reveal hero-scroll-stagger">
                         <a href="https://mymetalhub.getmembox.com/"
                             class="group relative inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-8 py-3.5 text-lg font-semibold text-[#2c1306] shadow-[0_0_40px_-5px_rgba(249,115,22,0.6)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_60px_-5px_rgba(249,115,22,0.8)]">
                             Explorar Formações
@@ -116,11 +198,11 @@
                         </a>
                     </div>
 
-                    <!-- Metrics/Trust -->
-                    <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 gsap-reveal hero-stagger">
+                    <!-- Metrics/Trust (Oculto temporariamente, reaparece em 01/10/2026 como "Cursos previstos") -->
+                    <div id="hero-metrics-section" class="mt-16 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 gsap-reveal hero-scroll-stagger" style="display: none;">
                         <div>
                             <div class="text-3xl font-bricolage text-white mb-1">10+</div>
-                            <div class="text-xs text-neutral-500 uppercase tracking-wider">Cursos</div>
+                            <div class="text-xs text-neutral-500 uppercase tracking-wider">Cursos previstos</div>
                         </div>
                         <div>
                             <div class="text-3xl font-bricolage text-white mb-1">100+</div>

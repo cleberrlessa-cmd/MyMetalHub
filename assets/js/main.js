@@ -59,7 +59,7 @@
 
             const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-            // Nav Animation
+            // Nav & Countdown Initial Animation
             tl.to('.gsap-nav-item', {
                 y: 0,
                 autoAlpha: 1,
@@ -67,26 +67,42 @@
                 stagger: 0.1,
                 delay: 0.2
             })
-                // Hero Content Stagger
-                .to('.hero-stagger', {
-                    y: 0,
-                    autoAlpha: 1,
-                    filter: 'blur(0px)',
-                    duration: 1,
-                    stagger: 0.15,
-                }, "-=0.4")
-                // Video Container Fade In
-                .to('.gsap-video-container', {
-                    opacity: 1,
-                    duration: 1.5,
-                    ease: 'power2.inOut'
-                }, "-=1")
-                // Video Subtle Zoom Out
-                .to('.gsap-video', {
-                    scale: 1,
-                    duration: 2.5,
-                    ease: 'power2.out'
-                }, "-=1.5");
+            // Countdown Banner Fade In on Top
+            .to('#hero-countdown-banner', {
+                y: 0,
+                autoAlpha: 1,
+                filter: 'blur(0px)',
+                duration: 1,
+                ease: 'power3.out'
+            }, "-=0.4");
+
+            // Hero Main Section ScrollTrigger Animation (Permanece apagada até rolar o site)
+            const heroScrollTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#hero-main",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            heroScrollTl.to("#hero-main .hero-scroll-stagger", {
+                y: 0,
+                autoAlpha: 1,
+                filter: 'blur(0px)',
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power3.out"
+            })
+            .to("#hero-main .gsap-video-container", {
+                opacity: 1,
+                duration: 1.5,
+                ease: "power2.inOut"
+            }, "-=1")
+            .to("#hero-main .gsap-video", {
+                scale: 1,
+                duration: 2.5,
+                ease: "power2.out"
+            }, "-=1.5");
 
             // Header Scroll Effect
             window.addEventListener('scroll', () => {
@@ -538,5 +554,87 @@
                 document.addEventListener('DOMContentLoaded', initBanner);
             } else {
                 initBanner();
+            }
+        })();
+
+        // ==========================================
+        // HERO COUNTDOWN TIMER (EXPIRA: 10/09/2026 11:00)
+        // ==========================================
+        (function() {
+            function initCountdown() {
+                const banner = document.getElementById('hero-countdown-banner');
+                if (!banner) return;
+
+                // Alvo: 10 de Setembro de 2026 às 11:00 AM (mês 8 = Setembro no JS)
+                const targetDate = new Date(2026, 8, 10, 11, 0, 0);
+
+                const daysEl = document.getElementById('timer-days');
+                const hoursEl = document.getElementById('timer-hours');
+                const minutesEl = document.getElementById('timer-minutes');
+                const secondsEl = document.getElementById('timer-seconds');
+
+                function update() {
+                    const now = new Date();
+                    const diff = targetDate.getTime() - now.getTime();
+
+                    // Se chegou ou ultrapassou 10/09/2026 às 11:00, oculta a mensagem
+                    if (diff <= 0) {
+                        banner.style.display = 'none';
+                        return true;
+                    }
+
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+                    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+                    return false;
+                }
+
+                const expired = update();
+                if (!expired) {
+                    const timer = setInterval(() => {
+                        if (update()) {
+                            clearInterval(timer);
+                        }
+                    }, 1000);
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCountdown);
+            } else {
+                initCountdown();
+            }
+        })();
+
+        // ==========================================
+        // HERO METRICS SECTION (REAPARECE EM 01/10/2026)
+        // ==========================================
+        (function() {
+            function checkMetricsVisibility() {
+                const metricsEl = document.getElementById('hero-metrics-section');
+                if (!metricsEl) return;
+
+                // Data de retorno: 01 de Outubro de 2026 (Mês 9 = Outubro no JS 0-indexed)
+                const targetDate = new Date(2026, 9, 1, 0, 0, 0);
+                const now = new Date();
+
+                if (now >= targetDate) {
+                    metricsEl.style.display = 'grid';
+                } else {
+                    metricsEl.style.display = 'none';
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', checkMetricsVisibility);
+            } else {
+                checkMetricsVisibility();
             }
         })();
