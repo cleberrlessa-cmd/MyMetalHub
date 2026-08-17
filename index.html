@@ -68,8 +68,8 @@
     </header>
 
     <!-- Countdown Section (Acima da Hero - Tela Suspensa com Espaçamento) -->
-    <section id="hero-countdown-banner" class="relative z-20 min-h-[calc(100vh-90px)] flex items-center justify-center pt-36 sm:pt-28 md:pt-24 pb-12 max-w-7xl mx-auto px-4 sm:px-6 w-full gsap-reveal hero-stagger">
-        <div class="p-6 md:p-10 rounded-3xl bg-gradient-to-br from-neutral-950 via-[#1a0e06] to-neutral-950 border-2 border-orange-500/40 backdrop-blur-xl shadow-[0_0_60px_-10px_rgba(249,115,22,0.4)] relative overflow-hidden group w-full">
+    <section id="hero-countdown-banner" class="relative z-20 min-h-screen flex items-center justify-center pb-12 max-w-7xl mx-auto px-4 sm:px-6 w-full gsap-reveal hero-stagger" style="padding-top: 120px;">
+        <div class="p-4 sm:p-6 md:p-10 rounded-3xl bg-gradient-to-br from-neutral-950 via-[#1a0e06] to-neutral-950 border-2 border-orange-500/40 backdrop-blur-xl shadow-[0_0_60px_-10px_rgba(249,115,22,0.4)] relative overflow-visible group w-full">
             <!-- Ember & Crucible Glow Effects -->
             <div class="absolute -top-16 -right-16 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-orange-500/30 transition-all duration-700"></div>
             <div class="absolute -bottom-16 -left-16 w-56 h-56 bg-yellow-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -107,30 +107,30 @@
             </h2>
 
             <!-- Countdown Timer Grid (Números Grandes e Destacados) -->
-            <div class="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto text-center w-full">
-                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors min-w-0">
-                    <div class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none" id="timer-days">00</div>
-                    <div class="text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wider mt-1">Dias</div>
+            <div class="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 mx-auto text-center w-full">
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center justify-center">
+                    <div class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none w-full text-center" id="timer-days">00</div>
+                    <div class="text-[7px] xs:text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wide mt-1">Dias</div>
                 </div>
-                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors min-w-0">
-                    <div class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none" id="timer-hours">00</div>
-                    <div class="text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wider mt-1">Horas</div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center justify-center">
+                    <div class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none w-full text-center" id="timer-hours">00</div>
+                    <div class="text-[7px] xs:text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wide mt-1">Horas</div>
                 </div>
-                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors min-w-0">
-                    <div class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none" id="timer-minutes">00</div>
-                    <div class="text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wider mt-1">Minutos</div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center justify-center">
+                    <div class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-orange-400 tracking-tight leading-none w-full text-center" id="timer-minutes">00</div>
+                    <div class="text-[7px] xs:text-[8px] sm:text-xs md:text-sm text-neutral-400 font-sans uppercase font-semibold tracking-wide mt-1">Minutos</div>
                 </div>
-                <div class="bg-black/80 border-2 border-orange-500/30 rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md relative shadow-[0_4px_20px_rgba(0,0,0,0.8)] group-hover:border-orange-500/50 transition-colors min-w-0">
-                    <div class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 via-orange-400 to-orange-500 tracking-tight leading-none" id="timer-seconds">00</div>
-                    <div class="text-[8px] sm:text-xs md:text-sm text-orange-400 font-sans uppercase font-semibold tracking-wider mt-1">Segundos</div>
+                <div class="bg-black/80 border-2 border-orange-500/30 rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-5 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center justify-center">
+                    <div class="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-bricolage text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 via-orange-400 to-orange-500 tracking-tight leading-none w-full text-center" id="timer-seconds">00</div>
+                    <div class="text-[7px] xs:text-[8px] sm:text-xs md:text-sm text-orange-400 font-sans uppercase font-semibold tracking-wide mt-1">Segundos</div>
                 </div>
             </div>
 
             <!-- Disruptive High-Impact Launch Badge (Abaixo do relógio) -->
-            <div class="mt-8 md:mt-10 flex justify-center px-2">
-                <div class="relative group/launch flex flex-wrap items-center justify-center gap-3 px-5 md:px-10 py-3.5 md:py-4 rounded-2xl sm:rounded-full bg-gradient-to-r from-orange-950/90 via-black/95 to-orange-950/90 border-2 border-orange-500/60 shadow-[0_0_40px_rgba(249,115,22,0.5)] backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:shadow-[0_0_60px_rgba(249,115,22,0.8)] hover:scale-105 w-full sm:w-auto">
+            <div class="mt-8 md:mt-10 w-full flex justify-center">
+                <div class="relative group/launch w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 md:px-10 py-4 md:py-4 rounded-2xl bg-gradient-to-r from-orange-950/90 via-black/95 to-orange-950/90 border-2 border-orange-500/60 shadow-[0_0_40px_rgba(249,115,22,0.5)] backdrop-blur-xl transition-all duration-500 hover:border-orange-400 hover:shadow-[0_0_60px_rgba(249,115,22,0.8)]">
                     <!-- Glowing animated background pulse -->
-                    <div class="absolute inset-0 rounded-2xl sm:rounded-full bg-gradient-to-r from-orange-500/20 via-yellow-500/20 to-orange-500/20 opacity-75 blur-md animate-pulse pointer-events-none"></div>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/20 via-yellow-500/20 to-orange-500/20 opacity-75 blur-md animate-pulse pointer-events-none"></div>
                     
                     <!-- Spark / Flame Icon -->
                     <div class="relative flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-gradient-to-br from-orange-500/30 to-yellow-500/20 border border-orange-400/50 text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.7)] shrink-0">
@@ -141,8 +141,8 @@
                     </div>
 
                     <!-- Text content -->
-                    <span class="relative text-xs sm:text-sm md:text-lg font-sans font-semibold uppercase tracking-[0.12em] sm:tracking-[0.22em] text-white text-center leading-snug">
-                        Lançamento da Plataforma <span class="font-bricolage font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-orange-400 to-orange-500">MyMetal<span class="text-[#FF8128]">Hub</span></span>
+                    <span class="relative text-[11px] sm:text-sm md:text-lg font-sans font-semibold uppercase tracking-[0.1em] sm:tracking-[0.2em] text-white text-center leading-relaxed">
+                        Lançamento da Plataforma<br class="sm:hidden" /> <span class="font-bricolage font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-orange-400 to-orange-500">MyMetal<span class="text-[#FF8128]">Hub</span></span>
                     </span>
                 </div>
             </div>
@@ -2474,6 +2474,28 @@
         </footer>
 
         <script src="assets/js/main.js"></script>
+
+        <!-- Ajuste dinâmico do padding-top da seção countdown baseado na altura real do header -->
+        <script>
+            (function () {
+                function adjustCountdownPadding() {
+                    var header = document.getElementById('header');
+                    var section = document.getElementById('hero-countdown-banner');
+                    if (!header || !section) return;
+                    var headerH = header.getBoundingClientRect().height;
+                    // Garante ao menos 20px de respiro além da altura do header
+                    section.style.paddingTop = (headerH + 20) + 'px';
+                }
+                // Roda logo ao carregar
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', adjustCountdownPadding);
+                } else {
+                    adjustCountdownPadding();
+                }
+                // Recalcula ao redimensionar a janela (ex: rotação do celular)
+                window.addEventListener('resize', adjustCountdownPadding);
+            })();
+        </script>
 </body>
 
 </html>
