@@ -558,15 +558,15 @@
         })();
 
         // ==========================================
-        // HERO COUNTDOWN TIMER (EXPIRA: 10/09/2026 11:00)
+        // HERO COUNTDOWN TIMER (EXPIRA: 10/09/2026 09:40)
         // ==========================================
         (function() {
             function initCountdown() {
                 const banner = document.getElementById('hero-countdown-banner');
                 if (!banner) return;
 
-                // Alvo: 10 de Setembro de 2026 às 11:00 AM (mês 8 = Setembro no JS)
-                const targetDate = new Date(2026, 8, 10, 11, 0, 0);
+                // Alvo: 10 de Setembro de 2026 às 09:40 AM (mês 8 = Setembro no JS)
+                const targetDate = new Date(2026, 8, 10, 9, 40, 0);
 
                 const daysEl = document.getElementById('timer-days');
                 const hoursEl = document.getElementById('timer-hours');
@@ -577,7 +577,7 @@
                     const now = new Date();
                     const diff = targetDate.getTime() - now.getTime();
 
-                    // Se chegou ou ultrapassou 10/09/2026 às 11:00, oculta a mensagem
+                    // Se chegou ou ultrapassou 10/09/2026 às 09:40, oculta a mensagem
                     if (diff <= 0) {
                         banner.style.display = 'none';
                         return true;
