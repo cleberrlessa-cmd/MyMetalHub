@@ -638,3 +638,34 @@
                 checkMetricsVisibility();
             }
         })();
+
+        // ==========================================
+        // SEÇÃO DEPOIMENTOS (INVISÍVEL ATÉ 30/11/2026)
+        // ==========================================
+        (function() {
+            function checkDepoimentosVisibility() {
+                const depoimentosEl = document.getElementById('depoimentos');
+                const heroBtnDepoimentos = document.getElementById('hero-btn-depoimentos');
+
+                // Data de liberação: 30 de Novembro de 2026 às 00:00:00 (Mês 10 = Novembro no JS 0-indexed)
+                const targetDate = new Date(2026, 10, 30, 0, 0, 0);
+                const now = new Date();
+
+                if (now >= targetDate) {
+                    if (depoimentosEl) depoimentosEl.style.display = 'block';
+                    if (heroBtnDepoimentos) heroBtnDepoimentos.style.display = 'inline-flex';
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        ScrollTrigger.refresh();
+                    }
+                } else {
+                    if (depoimentosEl) depoimentosEl.style.display = 'none';
+                    if (heroBtnDepoimentos) heroBtnDepoimentos.style.display = 'none';
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', checkDepoimentosVisibility);
+            } else {
+                checkDepoimentosVisibility();
+            }
+        })();
