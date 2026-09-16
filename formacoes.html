@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formacoes - MyMetalHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.03); border-radius: 9999px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.35); border-radius: 9999px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 0.6); }
+        /* Garante que nenhum elemento fique invisivel por CSS */
+        .gsap-reveal { opacity: 1 !important; visibility: visible !important; }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-orange-500/30">
+<div class="noise-bg"></div>
+<div class="fixed z-0 pointer-events-none top-0 right-0 bottom-0 left-0">
+    <div class="stars"></div>
+    <div class="absolute top-0 left-0 w-[600px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[800px] h-[600px] bg-orange-950/20 blur-[120px] rounded-full"></div>
+</div>
+<header class="fixed top-0 w-full z-50 bg-[#050505]/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="header">
+    <div class="w-full max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-4 flex flex-wrap md:flex-nowrap items-center justify-between gap-x-3 md:gap-x-0 gap-y-3 md:gap-y-4">
+        <a href="index.html" class="flex items-center gap-2 md:gap-3 shrink-0">
+            <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-900/10 border border-orange-500/20 p-1">
+                <img src="assets/images/mymetalhub_logo.png" alt="MyMetalHub Logo" class="w-full h-full object-contain">
+            </div>
+            <span class="text-base md:text-xl text-white font-bricolage font-medium tracking-wide">MyMetal<span class="text-[#FF8128]">HUB</span></span>
+        </a>
+        <nav class="flex items-center bg-white/[0.03] border border-white/10 rounded-full px-1 py-1 backdrop-blur-md overflow-x-auto no-scrollbar w-fit max-w-full md:w-auto order-3 md:order-none mx-auto md:mx-0 md:ml-auto md:mr-4">
+            <a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors shrink-0" href="index.html">Home</a>
+            <a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors shrink-0" href="sobre-nos.html">Sobre nos</a>
+            <a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-1 shrink-0" href="para_empresas.html">Solucoes para Empresas</a>
+        </nav>
+        <div class="flex items-center shrink-0 order-2 md:order-none">
+            <a class="inline-flex hover:brightness-110 transition-all text-[11px] md:text-sm text-white bg-gradient-to-b from-orange-400 to-orange-600 border-white/20 rounded-full border-t px-3 py-1.5 md:px-6 md:py-2.5 shadow-[0_0_15px_-3px_rgba(249,115,22,0.4)] whitespace-nowrap" href="index.html#planos">
+                Desbloquear o HUB
+            </a>
+        </div>
+    </div>
+</header>
+<section class="relative z-10 flex items-end justify-center pb-16" style="padding-top:140px;min-height:45vh;">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-orange-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-xs font-semibold text-orange-400 uppercase tracking-widest mb-6">
+            <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span></span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <span>Formacoes Disponiveis</span>
+        </div>
+
+
+    </div>
+</section>
+<div class="relative z-10 max-w-7xl mx-auto px-6"><div class="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div></div>
+<section class="relative z-10 py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[#050505] -z-20"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/10 blur-[150px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-700/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
+
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/60 bg-[#0A0A0A]/90 backdrop-blur-xl hover:border-orange-400 transition-all duration-500 shadow-[0_0_35px_rgba(249,115,22,0.35)] hover:shadow-[0_0_70px_rgba(249,115,22,0.75)] flex flex-col">
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/15 blur-[60px] rounded-full pointer-events-none group-hover:bg-orange-600/25 transition-all duration-700"></div>
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/fundicao_analitica_mesa.jpg" alt="Fundicao Analitica" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/20 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Disponivel
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Intermediário - Avançado</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"></path></svg>
+                        Fundicao e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-snug">
+                        Fundição Analítica – Solidificação, Alimentação e Enchimento de Peças
+                    </h2>
+                    <p class="text-neutral-400 font-sans text-sm leading-relaxed mb-8">
+                        Aprofunde a compreensão da fundição além do empírico: entenda a alimentação no molde, o preenchimento e a solidificação, tome decisões técnicas com base em dados e fatos concretos e científicos.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-500 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>9hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover"></div>
+                        <div><p class="text-white font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-500 font-sans text-xs">Especialista em Metalurgia</p></div>
+                    </div>
+                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
+                        <button type="button" onclick="openEmentaModal()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            O que irei aprender?
+                        </button>
+                        <a href="https://www.asaas.com/c/dcoqlirpd3pjcm07" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/60 bg-[#0A0A0A]/90 backdrop-blur-xl hover:border-orange-400 transition-all duration-500 shadow-[0_0_35px_rgba(249,115,22,0.35)] hover:shadow-[0_0_70px_rgba(249,115,22,0.75)] flex flex-col" style="transition-delay:100ms">
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/15 blur-[60px] rounded-full pointer-events-none group-hover:bg-orange-600/25 transition-all duration-700"></div>
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/tratamentos_termicos.jpg" alt="Tratamentos Térmicos" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/20 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Disponivel
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Básico - Intermediário</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                        Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Tratamentos Térmicos</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Fundamentos e tipos de tratamentos</p>
+                    <p class="text-neutral-400 font-sans text-sm leading-relaxed mb-8">Aprenda os fundamentos dos tratamentos térmicos e como, pela metalurgia física, cada processo altera a microestrutura e as propriedades dos materiais. Domine têmpera, revenimento e normalização com segurança e eficiência.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-500 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>12hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_mauro.jpg" alt="Mauro Castro" class="w-full h-full object-cover" style="object-position:center top"></div>
+                        <div><p class="text-white font-sans text-sm font-medium">Mauro F. Castro Moscoso</p><p class="text-neutral-500 font-sans text-xs">Especialista em Tratamentos Térmicos</p></div>
+                    </div>
+                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
+                        <button type="button" onclick="openEmentaModal2()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            O que irei aprender?
+                        </button>
+                        <a href="https://www.asaas.com/c/y5lgtqksq1zj4c7m" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3º CARD — EM BREVE -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/70 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col opacity-85 pointer-events-none select-none" style="transition-delay:200ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-white/5 blur-[60px] rounded-full pointer-events-none"></div>
+                <!-- Banner "Em Breve" centralizado sobre a imagem -->
+                <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+                    <div class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-white/20 bg-black/70 backdrop-blur-md text-sm font-bold text-white uppercase tracking-widest shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+                        <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Em Breve
+                    </div>
+                </div>
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/gestao1.jpg" alt="Lean em Fundicao" class="w-full h-full object-cover scale-105 object-center filter grayscale">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/40 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-neutral-400 uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2"><span class="relative inline-flex rounded-full h-2 w-2 bg-neutral-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-500 font-medium">Todos os niveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs text-neutral-500 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Gestao Industrial
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white/60 font-bricolage font-medium mb-3 leading-tight">Lean em Fundicao</h2>
+                    <p class="text-sm text-orange-400/40 font-sans mb-4 font-medium">Eliminacao de Desperdicios e Excelencia Operacional</p>
+                    <p class="text-neutral-600 font-sans text-sm leading-relaxed mb-8">Formacao pratica e aprofundada em Lean Manufacturing aplicado ao chao de fabrica da fundicao. Aprenda a identificar e eliminar os 7 desperdicios, implementar fluxo continuo, reduzir setup e construir uma cultura de melhoria continua.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-700 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0"><img src="assets/images/mestre_mauricio.jpg" alt="Mauricio" class="w-full h-full object-cover filter grayscale" style="object-position:center top"></div>
+                        <div><p class="text-neutral-600 font-sans text-sm font-medium">Mauricio Oliveira Junior</p><p class="text-neutral-700 font-sans text-xs">Especialista em Lean Manufacturing</p></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-neutral-600 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve disponível
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4º CARD — DEFETOS DE FUNDIÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/70 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col opacity-85 pointer-events-none select-none" style="transition-delay:300ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-white/5 blur-[60px] rounded-full pointer-events-none"></div>
+                <!-- Banner "Em Breve" centralizado sobre a imagem -->
+                <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+                    <div class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-white/20 bg-black/70 backdrop-blur-md text-sm font-bold text-white uppercase tracking-widest shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+                        <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Em Breve
+                    </div>
+                </div>
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/defeitos_fundicao.jpg" alt="Defeitos de Fundição e Possíveis Soluções" class="w-full h-full object-cover scale-105 object-center filter grayscale">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/40 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-neutral-400 uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2"><span class="relative inline-flex rounded-full h-2 w-2 bg-neutral-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-500 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs text-neutral-500 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white/60 font-bricolage font-medium mb-3 leading-tight">Defeitos de Fundição e Possíveis Soluções</h2>
+                    <p class="text-sm text-orange-400/40 font-sans mb-4 font-medium">Diagnóstico, Causa Raiz e Ações Corretivas no Chão de Fábrica</p>
+                    <p class="text-neutral-600 font-sans text-sm leading-relaxed mb-8">Aprenda a identificar, analisar e solucionar os principais defeitos em peças fundidas: rechupes, porosidades de gás, inclusões de escória, trincas a quente e não-preenchimento. Domine o diagnóstico de causa raiz e implemente soluções práticas com foco na redução imediata de refugo.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-700 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 003.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover filter grayscale"></div>
+                        <div><p class="text-neutral-600 font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-700 font-sans text-xs">Especialista em Metalurgia</p></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-neutral-600 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve disponível
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="mt-20 flex flex-col items-center gap-4 text-center">
+            <div class="w-12 h-12 rounded-full border border-dashed border-white/20 flex items-center justify-center text-neutral-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path></svg>
+            </div>
+            <p class="text-neutral-500 font-sans text-sm max-w-sm leading-relaxed">Novas formacoes chegando em breve.<br><span class="text-neutral-400">Acompanhe nossas redes para ser o primeiro a saber.</span></p>
+            <a href="https://www.instagram.com/mymetalhub_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-orange-500/30 text-sm text-neutral-400 hover:text-white transition-all duration-300 font-sans">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                Seguir no Instagram
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========================================================================= -->
+<!-- MODAL DE DETALHES DO CURSO ("O que irei aprender?")                       -->
+<!-- Baseado no padrão da Imagem 2 de referência                               -->
+<!-- ========================================================================= -->
+<div id="modalEmenta" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="closeEmentaModal()"></div>
+
+    <div class="relative w-full max-w-3xl max-h-[92vh] flex flex-col rounded-[28px] border border-orange-500/30 bg-[#0c0c0e] shadow-[0_0_80px_rgba(249,115,22,0.25)] overflow-hidden scale-95 transition-transform duration-300" id="modalBox">
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+
+        <!-- Botao Fechar Superior Direito -->
+        <button type="button" onclick="closeEmentaModal()" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-neutral-300 hover:text-white transition-all cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="overflow-y-auto custom-scrollbar p-6 sm:p-8 space-y-6 flex-1">
+            <!-- Cabecalho Instrutor / Obra (Estilo Imagem 2) -->
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 pt-2">
+                <div class="relative shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full p-[3px] bg-gradient-to-tr from-orange-600 via-amber-400 to-orange-500 shadow-[0_0_25px_rgba(249,115,22,0.4)]">
+                    <div class="w-full h-full rounded-full overflow-hidden bg-neutral-900 border-2 border-[#0c0c0e]">
+                        <img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="text-center sm:text-left flex-1">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-[11px] font-semibold text-orange-400 uppercase tracking-widest mb-2">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        FORMAÇÃO ESPECIALIZADA
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bricolage font-bold text-white tracking-tight leading-tight mb-1">
+                        Fundição Analítica
+                    </h3>
+                    <p class="text-orange-400 text-sm font-sans font-medium mb-2">
+                        Solidificação, Alimentação e Enchimento de Peças
+                    </p>
+                    <p class="text-xs text-neutral-400 flex items-center justify-center sm:justify-start gap-2">
+                        <svg class="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <span>Baseado no livro oficial • Editora Blucher / ABM</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card Apresentacao do Curso (Estilo Imagem 2) -->
+            <div class="relative rounded-2xl border border-orange-500/20 bg-gradient-to-b from-[#18110b] to-[#0e0c0a] p-5 sm:p-6 shadow-inner">
+                <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    APRESENTAÇÃO DA FORMAÇÃO
+                </div>
+                <h4 class="text-lg sm:text-xl font-bricolage font-bold text-white mb-3 leading-snug">
+                    ELIMINE O ACHISMO E DOMINE A CIÊNCIA EXATA DA SOLIDIFICAÇÃO E ENCHIMENTO
+                </h4>
+                <p class="text-neutral-300 font-sans text-xs sm:text-sm leading-relaxed mb-4">
+                    Aprofunde a compreensão da fundição além do empírico: entenda a alimentação no molde, o preenchimento e a solidificação, tome decisões técnicas com base em dados e fatos concretos e científicos.
+                </p>
+                <p class="text-neutral-400 font-sans text-xs sm:text-sm leading-relaxed">
+                    PROGRAMA DETALHADO ABAIXO
+                </p>
+            </div>
+
+            <!-- Topicos em Destaque (Tags com check da Imagem 2) -->
+            <div>
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    TÓPICOS EM DESTAQUE
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Metodologia Padrão Ouro (MPO)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Regra de Chvorinov &amp; Módulo Térmico
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Método de Heuvers (Círculos Inscritos)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Massalotes: RTA, RVA e RDA
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Bernoulli &amp; Continuidade Hidráulica
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Controle de Turbulência e Reynolds
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Regra 80/20 na Eliminação de Refugo
+                    </span>
+                </div>
+            </div>
+
+            <!-- Ementa Completa / Documento Oficial Descritivo -->
+            <div class="space-y-4 pt-2">
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-1">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                    O QUE VOCÊ IRÁ APRENDER (PROGRAMA DETALHADO)
+                </div>
+
+                <!-- Parte 1 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Parte 1 — Fundamentos Térmicos, Solidificação e Microestrutura
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 1</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Compreenda com profundidade a termodinâmica de resfriamento e a solidificação metálica para eliminar a origem dos defeitos de fábrica.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li>Transferência de calor no molde e taxa de resfriamento</li>
+                        <li>Contração líquida, contração de solidificação e contração sólida</li>
+                        <li>Diferenciação clara entre rechupes, microporosidades e porosidades de gás</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 2 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Parte 2 — Análise de Projetos para Alimentação de Peças Fundidas
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 2</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Compreenda os conceitos de rendimento metálico e retorno, buscando otimizar a produção para obter o máximo de peças úteis com o menor desperdício possível.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li>Alimentação e massalotes ideais para: Aços, Alumínio, Bronze, Ferro Branco, Ferros Grafíticos (Nodulares e Cinzentos), Latões, Ligas Cu-10%Al / Cu-Ni e Magnésio</li>
+                        <li>Aplicação da Regra de Chvorinov e cálculo do Módulo Térmico (M) como base matemática de solidificação</li>
+                        <li>Dimensionamento de Massalotes (abertos, cegos, frios ou quentes) e pescoços atendendo Requisitos Térmico (RTA), Volumétrico (RVA) e de Distância (RDA)</li>
+                        <li>Método de Heuvers (círculos inscritos) para solidificação direcionada e simplificação por placas/barras infinitas</li>
+                        <li>Aplicação de luvas isolantes/exotérmicas e dimensionamento de resfriadores metálicos e não metálicos</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 3 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Parte 3 — Análise Sistemática do Enchimento de Peças Fundidas
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 3</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Avance da química do metal líquido para a hidráulica prática, finalizando com as ferramentas de controle de qualidade e projetos de enchimento via canais.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li>Termodinâmica e Diagrama de Ellingham para prever estabilidade de óxidos e ação desoxidante</li>
+                        <li>Gestão de gases e óxidos: identificação e mitigação dos "três chefões", prevenindo aprisionamento de ar e inclusões</li>
+                        <li>Aplicação da Lei da Continuidade e Teorema de Bernoulli para controle de vazão, velocidade e pressão</li>
+                        <li>Projeto geométrico contra descolamento de fluxo e zonas de baixa pressão</li>
+                        <li>Dimensionamento de bacias anti-vórtice, canais de descida cônicos e canais de distribuição escalonados</li>
+                        <li>Controle de turbulência via número de Reynolds e respeito à velocidade crítica (fluxo laminar)</li>
+                        <li>Sistemas pressurizados convergentes vs despressurizados divergentes conforme grau de oxidação da liga</li>
+                        <li>Cálculo de tempo de enchimento internacional e determinação da seção de choque (estrangulamento)</li>
+                        <li>Especificação e posicionamento técnico de filtros cerâmicos para correção de fluxo e retenção de escórias</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 4 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Parte 4 — A Aplicação: Metodologia Padrão Ouro (MPO #1 a MPO #7)
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 4</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Domínio técnico para realizar um projeto completo de alimentação e enchimento com abordagem analítica, crítica e sistemática.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li>MPO #1: Identificação das características mecânicas, físicas e químicas exigidas para seleção de liga e processo</li>
+                        <li>MPO #2 e #3: Círculos inscritos, diferenciação de interfaces de crescimento, decomposição 3D em módulos e pontos quentes</li>
+                        <li>MPO #4 e #5: Dimensionamento de alimentação, cálculo de peças por caixa, contração sólida e ferramental</li>
+                        <li>MPO #6 e #7: Projeto de enchimento executivo, memórias de cálculo, histórico técnico e comunicação com clientes e produção</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 5 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Parte 5 — Fundição Eficiente e a Regra 80/20
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 5</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Visão executiva e estratégica: foco cirúrgico nos 20% de parâmetros controláveis que evitam 80% das perdas e refugos.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li>Controle da turbulência (responsável por ~80% dos refugos) pelo ajuste de tempo de vazamento e velocidade</li>
+                        <li>Recomendações práticas e posicionamento de canais de ataque no chão de fábrica</li>
+                        <li>Padronização de operadores, mitigação da escassez de mão de obra e tecnologia 4.0</li>
+                        <li>Aumento direto do rendimento metálico, redução de resíduos e eficiência energética</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodape Fixo do Modal (Estilo Imagem 2) -->
+        <div class="border-t border-white/10 bg-[#0c0c0e]/95 backdrop-blur-md p-4 sm:p-6 flex items-center justify-end gap-3 z-20">
+            <button type="button" onclick="closeEmentaModal()" class="px-6 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white text-sm font-semibold transition-all cursor-pointer">
+                Fechar
+            </button>
+            <a href="https://www.asaas.com/c/dcoqlirpd3pjcm07" target="_blank" rel="noopener noreferrer" class="px-7 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-amber-500 hover:brightness-110 text-white text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.4)] transition-all">
+                Garantir Acesso à Formação
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- MODAL DE DETALHES DO 2º CURSO ("Tratamentos Térmicos")                     -->
+<!-- ========================================================================= -->
+<div id="modalEmenta2" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="closeEmentaModal2()"></div>
+
+    <div class="relative w-full max-w-3xl max-h-[92vh] flex flex-col rounded-[28px] border border-orange-500/30 bg-[#0c0c0e] shadow-[0_0_80px_rgba(249,115,22,0.25)] overflow-hidden scale-95 transition-transform duration-300" id="modalBox2">
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+
+        <!-- Botao Fechar Superior Direito -->
+        <button type="button" onclick="closeEmentaModal2()" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-neutral-300 hover:text-white transition-all cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="overflow-y-auto custom-scrollbar p-6 sm:p-8 space-y-6 flex-1">
+            <!-- Cabecalho Instrutor / Obra -->
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 pt-2">
+                <div class="relative shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full p-[3px] bg-gradient-to-tr from-orange-600 via-amber-400 to-orange-500 shadow-[0_0_25px_rgba(249,115,22,0.4)]">
+                    <div class="w-full h-full rounded-full overflow-hidden bg-neutral-900 border-2 border-[#0c0c0e]">
+                        <img src="assets/images/mestre_mauro.jpg" alt="Mauro F. Castro Moscoso" class="w-full h-full object-cover" style="object-position:center top">
+                    </div>
+                </div>
+
+                <div class="text-center sm:text-left flex-1">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-[11px] font-semibold text-orange-400 uppercase tracking-widest mb-2">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        FORMAÇÃO ESPECIALIZADA
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bricolage font-bold text-white tracking-tight leading-tight mb-1">
+                        Tratamentos Térmicos
+                    </h3>
+                    <p class="text-orange-400 text-sm font-sans font-medium mb-2">
+                        Fundamentos e Tipos de Tratamentos
+                    </p>
+                    <p class="text-xs text-neutral-400 flex items-center justify-center sm:justify-start gap-2">
+                        <svg class="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span>Instrutor: Mauro F. Castro Moscoso • Especialista em Tratamentos Térmicos</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card Apresentacao do Curso -->
+            <div class="relative rounded-2xl border border-orange-500/20 bg-gradient-to-b from-[#18110b] to-[#0e0c0a] p-5 sm:p-6 shadow-inner">
+                <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    APRESENTAÇÃO DA FORMAÇÃO
+                </div>
+                <h4 class="text-lg sm:text-xl font-bricolage font-bold text-white mb-3 leading-snug">
+                    TRANSFORME RECEITAS DE PROCESSO EM ENGENHARIA E METALURGIA APLICADA
+                </h4>
+                <p class="text-neutral-300 font-sans text-xs sm:text-sm leading-relaxed mb-4">
+                    Aprenda os fundamentos dos tratamentos térmicos e como, pela metalurgia física, cada processo altera a microestrutura e as propriedades dos materiais. Domine têmpera, revenimento, normalização, tratamentos isotérmicos e termoquímicos com segurança, embasamento científico e eficiência.
+                </p>
+                <p class="text-neutral-400 font-sans text-xs sm:text-sm leading-relaxed font-semibold">
+                    PROGRAMA DETALHADO ABAIXO
+                </p>
+            </div>
+
+            <!-- Topicos em Destaque -->
+            <div>
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-3">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    TÓPICOS EM DESTAQUE
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Diagramas Fe-C &amp; Fe-Fe₃C
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Curvas TTT &amp; CCT (Cinética)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Ensaio Jominy &amp; Temperabilidade
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Têmpera, Revenimento &amp; Normalização
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Subzero &amp; Tratamentos Criogênicos
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Martêmpera, Austêmpera &amp; Solubilização
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-neutral-200">
+                        <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        Tratamentos Termoquímicos (Cementação/Nitretação)
+                    </span>
+                </div>
+            </div>
+
+            <!-- Ementa Completa -->
+            <div class="space-y-4 pt-2">
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider mb-1">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                    O QUE VOCÊ IRÁ APRENDER (PROGRAMA DETALHADO)
+                </div>
+
+                <!-- Módulo 1 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 1 — O que é Tratamento Térmico?
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 1</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Posiciona o tratamento térmico dentro da cadeia de fabricação e apresenta a relação fundamental entre processamento, microestrutura, propriedades e desempenho.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Apresentação do curso, proposta e a importância de substituir "receitas" por fenômenos metalúrgicos</li>
+                        <li><strong>Aula 2:</strong> O tratamento térmico no ciclo de fabricação, histórico metalúrgico e condições iniciais do componente</li>
+                        <li><strong>Aula 3:</strong> Resfriamento controlado: relação entre taxa de resfriamento, dureza, distorções e tensões residuais</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 2 — Estrutura Cristalina dos Metais
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 2</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Estabelece a base cristalográfica necessária para compreender as transformações de fase, alotropia do ferro e interação com o carbono.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Estrutura cristalina dos metais, célula unitária e redes de interesse metalúrgico</li>
+                        <li><strong>Aula 2:</strong> Alotropia e carbono no aço: transformação CFC/CCC e solução sólida atômica</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 3 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 3 — Defeitos Cristalinos e Deformação
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 3</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Estuda o comportamento do metal real através das discordâncias, vacâncias, difusão e mecanismos de nucleação e crescimento.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Defeitos, discordâncias e resistência mecânica (movimentação e deformação plástica)</li>
+                        <li><strong>Aula 2:</strong> Temperatura, vacâncias e difusão: mobilidade atômica e energia térmica</li>
+                        <li><strong>Aula 3:</strong> Nucleação e crescimento: controle de transformações por contornos de grão e interfaces</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 4 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 4 — Mecanismos de Endurecimento
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 4</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Diferentes caminhos metalúrgicos para aumentar a resistência e dureza através do bloqueio do movimento de discordâncias.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Seleção da estratégia de endurecimento em função da aplicação e material</li>
+                        <li><strong>Aula 2:</strong> Criação de obstáculos na rede cristalina (solutos, contornos e precipitados)</li>
+                        <li><strong>Aula 3:</strong> Encruamento, endurecimento por precipitação e transformações de fase</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 5 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 5 — Termodinâmica Aplicada à Metalurgia
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 5</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Energia livre, estabilidade termodinâmica e estados metaestáveis que determinam a força motriz das transformações.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Estabilidade, energia livre e metaestabilidade metalúrgica</li>
+                        <li><strong>Aula 2:</strong> Aplicação aos diagramas de equilíbrio e ciclos térmicos de tratamento</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 6 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 6 — Difusão e Movimento Atômico
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 6</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Fundamentos do transporte de matéria no estado sólido e sua aplicação em homogeneização e tratamentos de superfície.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Mecanismos de difusão atômica, gradientes de concentração e efeito da temperatura</li>
+                        <li><strong>Aula 2:</strong> Difusão nos tratamentos térmicos: evolução microestrutural e controle tempo-temperatura</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 7 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 7 — Diagrama Fe-C e Microconstituintes
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 7</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Estudo profundo das ligas ferrosas (aço e ferro fundido), diagramas Fe-Fe₃C e Fe-C/grafita e constituintes microestruturais.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> O diagrama de fases Fe-C (metaestável Fe-Fe₃C): linhas críticas A₁, A₃, A_cm e reações eutetóide/eutética</li>
+                        <li><strong>Aula 2:</strong> Microconstituintes dos aços: ferrita, austenita, perlita, cementita e ledeburita</li>
+                        <li><strong>Aula 3:</strong> Sistema Fe-C/grafita nos ferros fundidos: análise de matrizes e grafitização</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 8 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 8 — Curvas TTT e CCT (Cinética das Transformações)
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 8</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Transição do equilíbrio para a cinética: influência do tempo e da taxa de resfriamento sobre bainita, martensita e perlita.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Do equilíbrio à cinética: limitações do diagrama estático e efeito do tempo</li>
+                        <li><strong>Aula 2:</strong> Leitura e aplicação prática das curvas TTT (isotérmicas) e CCT (resfriamento contínuo)</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 9 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 9 — Ensaio Jominy e Temperabilidade
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 9</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        Conecta a transformação martensítica com as dimensões reais da peça e a capacidade de extração de calor do meio de têmpera.
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside">
+                        <li><strong>Aula 1:</strong> Temperabilidade vs Dureza: formação de martensita em profundidade na seção</li>
+                        <li><strong>Aula 2:</strong> Ensaio Jominy: procedimento normatizado, curva de temperabilidade e interpretação</li>
+                        <li><strong>Aula 3:</strong> Geometria, efeito de massa e severidade de meio (H) na extração de calor</li>
+                        <li><strong>Aula 4:</strong> Abordagem de Grossmann e cálculo da distância Jominy equivalente</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo 10 -->
+                <div class="rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:p-5 hover:border-orange-500/30 transition-colors">
+                    <div class="flex items-center justify-between gap-3 mb-2">
+                        <h5 class="text-white font-bricolage font-semibold text-sm sm:text-base">
+                            Módulo 10 — Tipos de Tratamento Térmico (30 Aulas Práticas)
+                        </h5>
+                        <span class="text-[11px] text-orange-400 font-mono font-medium px-2 py-0.5 rounded bg-orange-500/10 shrink-0">Módulo 10</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed mb-3">
+                        O grande módulo aplicado do curso, reunindo 30 aulas organizadas em 7 blocos temáticos abrangentes:
+                    </p>
+                    <ul class="text-xs text-neutral-300 space-y-2 list-disc list-inside">
+                        <li><strong>Bloco A (Recozimentos &amp; Normalização):</strong> Recozimento pleno, esferoidização, alívio de tensões e normalização (Aulas 1 a 4)</li>
+                        <li><strong>Bloco B (Têmpera &amp; Resfriamento):</strong> Ciclos de têmpera, austenitização e engenharia do resfriamento (Aulas 5 a 7)</li>
+                        <li><strong>Bloco C (Revenimento &amp; Criogenia):</strong> Estágios do revenimento, controle de austenita retida e tratamentos subzero/criogênicos (Aulas 8 a 12)</li>
+                        <li><strong>Bloco D (Tratamentos Isotérmicos &amp; Especiais):</strong> Martêmpera, austêmpera, têmpera interrompida e solubilização/envelhecimento (Aulas 13 a 17)</li>
+                        <li><strong>Bloco E (Termoquímicos &amp; Cementação):</strong> Cementação gasosa/líquida, difusão de carbono, oxidação intergranular e controle de camadas (Aulas 18 a 25)</li>
+                        <li><strong>Bloco F (Nitretação &amp; Outros):</strong> Carbonitretação, nitretação, nitrocarburação ferrítica e boretação (Aulas 26 a 29)</li>
+                        <li><strong>Bloco G (Endurecimento Localizado):</strong> Têmpera por indução e chama (Aula 30)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodape Fixo do Modal -->
+        <div class="border-t border-white/10 bg-[#0c0c0e]/95 backdrop-blur-md p-4 sm:p-6 flex items-center justify-end gap-3 z-20">
+            <button type="button" onclick="closeEmentaModal2()" class="px-6 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white text-sm font-semibold transition-all cursor-pointer">
+                Fechar
+            </button>
+            <a href="https://www.asaas.com/c/y5lgtqksq1zj4c7m" target="_blank" rel="noopener noreferrer" class="px-7 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 via-orange-600 to-amber-500 hover:brightness-110 text-white text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.4)] transition-all">
+                Garantir Acesso à Formação
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer class="relative z-10 bg-[#020202] pt-20 pb-8 border-t border-orange-500/20 mt-12">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent shadow-[0_0_20px_rgba(249,115,22,0.8)]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] max-w-md h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent blur-[2px]"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-600/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/10 to-orange-900/10 border border-orange-500/20 p-0.5"><img src="assets/images/mymetalhub_logo.png" alt="Logo" class="w-full h-full object-contain"></div>
+                    <span class="text-2xl text-white font-bricolage font-medium">MyMetal<span class="text-[#FF8128]">HUB</span></span>
+                </div>
+                <p class="text-neutral-400 font-sans text-sm mb-8 max-w-sm leading-relaxed">A plataforma definitiva para profissionais da fundicao que desejam dominar o chao de fabrica atraves do embasamento cientifico.</p>
+                <div class="flex flex-col gap-3 text-sm text-neutral-400 font-sans">
+                    <span class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><svg class="w-4 h-4 text-orange-500/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>SAC: mymetalhub@mymetalhub.com</span>
+                    <span class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><svg class="w-4 h-4 text-orange-500/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>CNPJ: 67.829.453/0001-04</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bricolage font-medium mb-6">Institucional</h4>
+                <ul class="space-y-4 font-sans text-sm">
+                    <li><a href="sobre-nos.html" class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Sobre Nos</a></li>
+                    <li><a href="index.html#quem-ensina" class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Nossos Professores</a></li>
+                    <li><a href="assets/docs/Politica%20Privacidade%20Mymetalhub%20LGPD.pdf" target="_blank" class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Politicas de Privacidade</a></li>
+                    <li><a href="assets/docs/TERMOS%20DE%20USO%20DA%20PLATAFORMA%20MYMETALHUB.pdf" target="_blank" class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bricolage font-medium mb-6">Redes Sociais</h4>
+                <p class="text-neutral-400 font-sans text-sm mb-4">Acompanhe as novidades e dicas diarias.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/mymetalhub_/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="https://www.youtube.com/watch?v=0jCTm8GdZG4" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/mymetalhub/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 font-sans text-xs text-neutral-500">
+            <p>&copy; 2026 MyMetalHUB. Todos os direitos reservados.</p>
+            <p>Criado para a elite da metalurgia.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.gsap-reveal').forEach(function(el, i) {
+        gsap.fromTo(el, {opacity:0,y:30,filter:'blur(8px)'}, {opacity:1,y:0,filter:'blur(0px)',duration:0.9,delay:i*0.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
+    });
+
+    function openEmentaModal() {
+        const modal = document.getElementById('modalEmenta');
+        const box = document.getElementById('modalBox');
+        if (!modal || !box) return;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        box.classList.remove('scale-95');
+        box.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeEmentaModal() {
+        const modal = document.getElementById('modalEmenta');
+        const box = document.getElementById('modalBox');
+        if (!modal || !box) return;
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        box.classList.add('scale-95');
+        box.classList.remove('scale-100');
+        document.body.style.overflow = '';
+    }
+
+    function openEmentaModal2() {
+        const modal = document.getElementById('modalEmenta2');
+        const box = document.getElementById('modalBox2');
+        if (!modal || !box) return;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        box.classList.remove('scale-95');
+        box.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeEmentaModal2() {
+        const modal = document.getElementById('modalEmenta2');
+        const box = document.getElementById('modalBox2');
+        if (!modal || !box) return;
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        box.classList.add('scale-95');
+        box.classList.remove('scale-100');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeEmentaModal();
+            closeEmentaModal2();
+        }
+    });
+</script>
+</body>
+</html>
