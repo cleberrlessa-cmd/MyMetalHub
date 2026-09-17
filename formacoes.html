@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formacoes - MyMetalHub</title>
+    <title>Formações e Cursos - MyMetalHub</title>
+    <!-- Metadados de SEO Internacional -->
+    <meta name="description" content="Catálogo de Formações Executivas em Metalurgia Física, Fundição Analítica e Tratamentos Térmicos.">
+    <link rel="canonical" href="https://mymetalhub.com/pt/formacoes.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://mymetalhub.com/pt/formacoes.html">
+    <link rel="alternate" hreflang="en" href="https://mymetalhub.com/en/formacoes.html">
+    <link rel="alternate" hreflang="x-default" href="https://mymetalhub.com/pt/formacoes.html">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Formações e Cursos - MyMetalHub">
+    <meta property="og:description" content="Catálogo de Formações Executivas em Metalurgia e Fundição.">
+    <meta property="og:url" content="https://mymetalhub.com/pt/formacoes.html">
+    <meta property="og:site_name" content="MyMetalHub">
+    <meta property="og:image" content="https://mymetalhub.com/assets/images/mymetalhub_logo.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -38,7 +54,7 @@
             <a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors shrink-0" href="sobre-nos.html">Sobre nos</a>
             <a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-1 shrink-0" href="para_empresas.html">Solucoes para Empresas</a>
         </nav>
-        <div class="flex items-center shrink-0 order-2 md:order-none">
+        <div class="flex items-center gap-3 shrink-0 order-2 md:order-none">
             <a class="inline-flex hover:brightness-110 transition-all text-[11px] md:text-sm text-white bg-gradient-to-b from-orange-400 to-orange-600 border-white/20 rounded-full border-t px-3 py-1.5 md:px-6 md:py-2.5 shadow-[0_0_15px_-3px_rgba(249,115,22,0.4)] whitespace-nowrap" href="index.html#planos">
                 Desbloquear o HUB
             </a>
@@ -155,95 +171,342 @@
             </article>
 
             <!-- 3º CARD — EM BREVE -->
-            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/70 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col opacity-85 pointer-events-none select-none" style="transition-delay:200ms">
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:200ms">
                 <!-- Badge Em Breve em destaque -->
                 <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
                 <div class="absolute -top-16 -right-16 w-48 h-48 bg-white/5 blur-[60px] rounded-full pointer-events-none"></div>
-                <!-- Banner "Em Breve" centralizado sobre a imagem -->
-                <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-                    <div class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-white/20 bg-black/70 backdrop-blur-md text-sm font-bold text-white uppercase tracking-widest shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-                        <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Em Breve
-                    </div>
-                </div>
+                
                 <div class="relative h-64 overflow-hidden rounded-t-[32px]">
-                    <img src="assets/images/gestao1.jpg" alt="Lean em Fundicao" class="w-full h-full object-cover scale-105 object-center filter grayscale">
-                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/40 to-[#0A0A0A]"></div>
-                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-neutral-400 uppercase tracking-widest">
-                        <span class="relative flex h-2 w-2"><span class="relative inline-flex rounded-full h-2 w-2 bg-neutral-500"></span></span>
+                    <img src="assets/images/gestao1.jpg" alt="Lean em Fundicao" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Em Breve
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-500 font-medium">Todos os niveis</div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs text-neutral-500 mb-4 w-fit">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        Gestao Industrial
+                        Gestão Industrial
                     </div>
-                    <h2 class="text-2xl md:text-3xl text-white/60 font-bricolage font-medium mb-3 leading-tight">Lean em Fundicao</h2>
-                    <p class="text-sm text-orange-400/40 font-sans mb-4 font-medium">Eliminacao de Desperdicios e Excelencia Operacional</p>
-                    <p class="text-neutral-600 font-sans text-sm leading-relaxed mb-8">Formacao pratica e aprofundada em Lean Manufacturing aplicado ao chao de fabrica da fundicao. Aprenda a identificar e eliminar os 7 desperdicios, implementar fluxo continuo, reduzir setup e construir uma cultura de melhoria continua.</p>
-                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-700 font-sans">
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Lean em Fundição</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Eliminação de Desperdícios e Excelência Operacional</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Formação prática e aprofundada em Lean Manufacturing aplicado ao chão de fábrica da fundição. Aprenda a identificar e eliminar os 7 desperdícios, implementar fluxo contínuo, reduzir setup e construir uma cultura de melhoria contínua.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5 mb-8">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0"><img src="assets/images/mestre_mauricio.jpg" alt="Mauricio" class="w-full h-full object-cover filter grayscale" style="object-position:center top"></div>
-                        <div><p class="text-neutral-600 font-sans text-sm font-medium">Mauricio Oliveira Junior</p><p class="text-neutral-700 font-sans text-xs">Especialista em Lean Manufacturing</p></div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_mauricio.jpg" alt="Mauricio" class="w-full h-full object-cover" style="object-position:center top"></div>
+                        <div><p class="text-white font-sans text-sm font-medium">Mauricio Oliveira Junior</p><p class="text-neutral-400 font-sans text-xs">Especialista em Lean Manufacturing</p></div>
                     </div>
                     <div class="mt-auto pt-4 border-t border-white/5">
-                        <div class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-neutral-600 cursor-not-allowed">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Em breve disponível
-                        </div>
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
                     </div>
                 </div>
             </article>
 
-            <!-- 4º CARD — DEFETOS DE FUNDIÇÃO (EM BREVE) -->
-            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/70 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col opacity-85 pointer-events-none select-none" style="transition-delay:300ms">
+            <!-- 4º CARD — DEFEITOS DE FUNDIÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:300ms">
                 <!-- Badge Em Breve em destaque -->
-                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
                 <div class="absolute -top-16 -right-16 w-48 h-48 bg-white/5 blur-[60px] rounded-full pointer-events-none"></div>
-                <!-- Banner "Em Breve" centralizado sobre a imagem -->
-                <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-                    <div class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-white/20 bg-black/70 backdrop-blur-md text-sm font-bold text-white uppercase tracking-widest shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-                        <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Em Breve
-                    </div>
-                </div>
+                
                 <div class="relative h-64 overflow-hidden rounded-t-[32px]">
-                    <img src="assets/images/defeitos_fundicao.jpg" alt="Defeitos de Fundição e Possíveis Soluções" class="w-full h-full object-cover scale-105 object-center filter grayscale">
-                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/40 to-[#0A0A0A]"></div>
-                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-neutral-400 uppercase tracking-widest">
-                        <span class="relative flex h-2 w-2"><span class="relative inline-flex rounded-full h-2 w-2 bg-neutral-500"></span></span>
+                    <img src="assets/images/defeitos_fundicao.jpg" alt="Defeitos de Fundição e Possíveis Soluções" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Em Breve
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-500 font-medium">Todos os níveis</div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs text-neutral-500 mb-4 w-fit">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                         Fundição e Metalurgia
                     </div>
-                    <h2 class="text-2xl md:text-3xl text-white/60 font-bricolage font-medium mb-3 leading-tight">Defeitos de Fundição e Possíveis Soluções</h2>
-                    <p class="text-sm text-orange-400/40 font-sans mb-4 font-medium">Diagnóstico, Causa Raiz e Ações Corretivas no Chão de Fábrica</p>
-                    <p class="text-neutral-600 font-sans text-sm leading-relaxed mb-8">Aprenda a identificar, analisar e solucionar os principais defeitos em peças fundidas: rechupes, porosidades de gás, inclusões de escória, trincas a quente e não-preenchimento. Domine o diagnóstico de causa raiz e implemente soluções práticas com foco na redução imediata de refugo.</p>
-                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-700 font-sans">
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 003.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Defeitos de Fundição e Possíveis Soluções</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Diagnóstico, Causa Raiz e Ações Corretivas no Chão de Fábrica</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Aprenda a identificar, analisar e solucionar os principais defeitos em peças fundidas: rechupes, porosidades de gás, inclusões de escória, trincas a quente e não-preenchimento. Domine o diagnóstico de causa raiz e implemente soluções práticas com foco na redução imediata de refugo.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>A definir</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5 mb-8">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/10 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover filter grayscale"></div>
-                        <div><p class="text-neutral-600 font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-700 font-sans text-xs">Especialista em Metalurgia</p></div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-8">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover"></div>
+                        <div><p class="text-white font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-400 font-sans text-xs">Especialista em Metalurgia</p></div>
                     </div>
                     <div class="mt-auto pt-4 border-t border-white/5">
-                        <div class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-neutral-600 cursor-not-allowed">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Em breve disponível
-                        </div>
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5º CARD — SOLIDIFICAÇÃO E SIMULAÇÃO PARA FUNDIÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:400ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/solidificacao_simulacao.jpg" alt="Solidificação e Simulação para Fundição" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Solidificação e Simulação para Fundição</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Simulação Computacional e Prevenção de Falhas</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Leve o processo para o ambiente digital: preveja o comportamento do metal com base na Solidificação, antecipe falhas para corrigi-las. Aprenda a interpretar simulações e tomar decisões mais seguras, reduzindo riscos, custos e retrabalho.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>6hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6º CARD — METALOGRAFIA DAS LIGAS DE ALUMINIO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:500ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/metalografia_aluminio.jpg" alt="Metalografia das Ligas de Alumínio – Teoria e Boas Práticas" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.6.438l-.6.6a2 2 0 00-.586 1.414V20a2 2 0 002 2h14a2 2 0 002-2v-2.414a2 2 0 00-.586-1.414l-.6-.6z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Metalografia das Ligas de Alumínio – Teoria e Boas Práticas</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Preparação, Revelação e Análise Microestrutural</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Domine, de forma simples e aplicada, a preparação, revelação e interpretação de microestruturas das ligas de alumínio, garantindo análises precisas, confiáveis e consistentes em avaliações industriais.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>6hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6º CARD — METALOGRAFIA DOS FERROSOS (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:500ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/metalografia_ferrosos.jpg" alt="Metalografia dos Ferrosos – Teoria e Boas Práticas" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.6.438l-.6.6a2 2 0 00-.586 1.414V20a2 2 0 002 2h14a2 2 0 002-2v-2.414a2 2 0 00-.586-1.414l-.6-.6z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Metalografia dos Ferrosos – Teoria e Boas Práticas</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Preparação, Revelação e Análise Microestrutural</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Aprenda, de forma simples e aplicada, a preparar, revelar e interpretar microestruturas ferrosas com precisão. Domine fundamentos e melhores práticas para análises confiáveis e consistentes em avaliações metalúrgicas.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>6hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8º CARD — OPERAÇÃO DE FORNOS DE INDUÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:600ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/fornos_inducao.jpg" alt="Operação de Fornos de Indução" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Operação de Fornos de Indução</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Controle Térmico e Eficiência Energética na Fusão</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Aborda os fundamentos e práticas da operação de fornos de indução, com foco em controle térmico, eficiência energética, estabilidade do processo e impacto das variáveis operacionais na qualidade do metal líquido.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>8hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9º CARD — NORMAS PARA FUNDIÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:700ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/normas_fundicao.jpg" alt="Normas para Fundição" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Normas para Fundição</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Requisitos Técnicos, Inspeção e Conformidade</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Para quem quer entender, de forma clara e aplicada, normas técnicas e requisitos da indústria. Aprenda a interpretar padrões, aplicar critérios de aceitação e garantir conformidade nos resultados, direto ao que importa.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>8hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 10º CARD — CUSTOS E FORMAÇÃO DE PREÇOS PARA FUNDIÇÃO (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:800ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/custos_precificacao.jpg" alt="Custos e Formação de Preços para Fundição" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                        Gestão e Custos
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Custos e Formação de Preços para Fundição</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Gestão Financeira, Sistemas de Custeio e Precificação</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Entenda como os conceitos financeiros, tributários e contábeis impactam no preço da sua peça fundida e na sua competitividade e aprenda a precificá-la de forma correta a partir dos diferentes sistemas de custeio.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>5hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 11º CARD — MICROFUSÃO - FUNDIÇÃO DE PRECISÃO - INVESTMENT CASTING (EM BREVE) -->
+            <article class="relative group rounded-[32px] overflow-hidden border-2 border-orange-500/40 bg-[#0A0A0A]/85 backdrop-blur-xl hover:border-orange-500/80 transition-all duration-500 shadow-[0_0_25px_rgba(249,115,22,0.25)] hover:shadow-[0_0_50px_rgba(249,115,22,0.55)] flex flex-col" style="transition-delay:900ms">
+                <!-- Badge Em Breve em destaque -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-orange-600/10 blur-[60px] rounded-full pointer-events-none"></div>
+                
+                <div class="relative h-64 overflow-hidden rounded-t-[32px]">
+                    <img src="assets/images/microfusao.jpg" alt="Microfusão - Fundição de Precisão - Investment Casting" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 object-center">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#0A0A0A]"></div>
+                    <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-[#0A0A0A]/80 backdrop-blur-md text-xs font-semibold text-orange-400 uppercase tracking-widest shadow-md">
+                        <span class="relative flex h-2 w-2"><span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+                        Em Breve
+                    </div>
+                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Todos os níveis</div>
+                </div>
+                <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                        Fundição e Metalurgia
+                    </div>
+                    <h2 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-3 leading-tight">Microfusão - Fundição de Precisão - Investment Casting</h2>
+                    <p class="text-sm text-orange-400/80 font-sans mb-4 font-medium">Processo, Casca Cerâmica e Geometrias Complexas</p>
+                    <p class="text-neutral-300 font-sans text-sm leading-relaxed mb-8">Domine um dos processos mais precisos e versáteis da fundição. Conheça os fundamentos da microfusão, desde a produção dos modelos em cera e construção da casca cerâmica até a fusão, vazamento e acabamento das peças. Entenda as principais variáveis do processo e como controlá-las para produzir geometrias complexas, excelente acabamento superficial e elevada precisão dimensional.</p>
+                    <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-400 font-sans">
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>6hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <a href="#" onclick="alert('Em breve! Este curso estará disponível para inscrições em breve.'); return false;" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer text-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Em breve
+                        </a>
                     </div>
                 </div>
             </article>
@@ -794,7 +1057,6 @@
                 <p class="text-neutral-400 font-sans text-sm mb-8 max-w-sm leading-relaxed">A plataforma definitiva para profissionais da fundicao que desejam dominar o chao de fabrica atraves do embasamento cientifico.</p>
                 <div class="flex flex-col gap-3 text-sm text-neutral-400 font-sans">
                     <span class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><svg class="w-4 h-4 text-orange-500/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>SAC: mymetalhub@mymetalhub.com</span>
-                    <span class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><svg class="w-4 h-4 text-orange-500/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>CNPJ: 67.829.453/0001-04</span>
                 </div>
             </div>
             <div>
