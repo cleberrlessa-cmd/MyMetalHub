@@ -1,0 +1,32 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": "Home",
+    "sobre": "About Us",
+    "empresas": "Enterprise Solutions",
+    "formacoes": "Training & Courses",
+    "cta": "Unlock the HUB"
+  },
+  "cookie_banner": {
+    "title": "Cookie Controls",
+    "description": "We use essential cookies to optimize your experience and analyze traffic in compliance with global privacy standards.",
+    "reject": "Decline",
+    "accept": "Accept All"
+  },
+  "b2b_modal": {
+    "title": "Speak with a Specialist",
+    "subtitle": "Fill out the form below to get a corporate training diagnosis tailored for your engineering & foundry teams.",
+    "field_subject": "Subject / Request",
+    "field_email": "Corporate Email",
+    "field_phone": "Phone / WhatsApp",
+    "field_message": "Requirement Details",
+    "btn_submit": "Send Message",
+    "btn_sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_subtitle": "We received your request regarding \"{subject}\". Our technical team will be in touch shortly.",
+    "btn_close": "Close"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - MyMetalHub</title>
+<!-- Metadados de SEO Internacional -->
+<meta content="Conheça a história, visão e a autoridade técnica por trás do MyMetalHub. Formando especialistas e líderes da indústria de fundição." name="description"/>
+<link href="https://mymetalhub.com/en/sobre-nos.html" rel="canonical"/>
+<link href="https://mymetalhub.com/pt/sobre-nos.html" hreflang="pt-BR" rel="alternate"/>
+<link href="https://mymetalhub.com/en/sobre-nos.html" hreflang="en" rel="alternate"/>
+<link href="https://mymetalhub.com/pt/sobre-nos.html" hreflang="x-default" rel="alternate"/>
+<!-- Open Graph / Social Media -->
+<meta content="en_US" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="About Us - MyMetalHub" property="og:title"/>
+<meta content="Conheça a história e autoridade técnica por trás do MyMetalHub." property="og:description"/>
+<meta content="https://mymetalhub.com/pt/sobre-nos.html" property="og:url"/>
+<meta content="MyMetalHub" property="og:site_name"/>
+<meta content="https://mymetalhub.com/assets/images/mymetalhub_logo.png" property="og:image"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+</head>
+<body class="min-h-screen selection:bg-orange-500/30">
+<div class="noise-bg"></div>
+<!-- Background Gradients -->
+<div class="fixed z-0 pointer-events-none top-0 right-0 bottom-0 left-0">
+<div class="stars"></div>
+<div class="absolute top-0 left-0 w-[600px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 right-0 w-[800px] h-[600px] bg-orange-950/20 blur-[120px] rounded-full"></div>
+</div>
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-[#050505]/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="header">
+<div class="w-full max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-4 flex flex-wrap md:flex-nowrap items-center justify-between gap-x-3 md:gap-x-0 gap-y-3 md:gap-y-4">
+<!-- Logo -->
+<a class="flex items-center gap-2 md:gap-3 gsap-nav-item shrink-0" href="index.html">
+<div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-900/10 border border-orange-500/20 p-1">
+<img alt="MyMetalHub Logo" class="w-full h-full object-contain" src="../assets/images/mymetalhub_logo.png"/>
+</div>
+<span class="text-base md:text-xl text-white font-bricolage font-medium tracking-wide">MyMetal<span class="text-[#FF8128]">HUB</span></span>
+</a>
+<!-- Center Menu -->
+<nav class="flex items-center bg-white/[0.03] border border-white/10 rounded-full px-1 py-1 backdrop-blur-md gsap-nav-item overflow-x-auto no-scrollbar w-fit max-w-full md:w-auto order-3 md:order-none mx-auto md:mx-0 md:ml-auto md:mr-4">
+<a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors shrink-0" href="index.html">Home</a>
+<a class="px-3 md:px-4 py-1.5 bg-neutral-800/80 rounded-full text-[11px] md:text-sm text-white flex items-center gap-2 border border-white/5 shadow-inner shrink-0" href="sobre-nos.html">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                    About Us
+                </a>
+<a class="px-3 md:px-5 py-1.5 text-[11px] md:text-sm text-neutral-400 hover:text-white transition-colors flex items-center gap-1 shrink-0" href="para_empresas.html">
+                    Corporate Solutions
+                </a>
+</nav>
+<!-- CTA Right & Language Selector -->
+<div class="flex items-center gap-3 gsap-nav-item shrink-0 order-2 md:order-none">
+<!-- Language Selector -->
+<div class="relative flex items-center bg-white/[0.05] border border-white/10 rounded-full px-2.5 py-1 text-xs text-white backdrop-blur-md shrink-0">
+<svg class="w-3.5 h-3.5 text-orange-400 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<select aria-label="Selecionar Idioma" class="mymetalhub-lang-selector bg-transparent text-white text-xs border-none outline-none cursor-pointer pr-1">
+<option class="bg-neutral-900 text-white" value="pt-BR">PT-BR</option>
+<option class="bg-neutral-900 text-white" value="en">EN</option>
+</select>
+</div>
+<a class="inline-flex hover:brightness-110 transition-all text-[11px] md:text-sm text-white bg-gradient-to-b from-orange-400 to-orange-600 border-white/20 rounded-full border-t px-3 py-1.5 md:px-6 md:py-2.5 shadow-[0_0_15px_-3px_rgba(249,115,22,0.4)] whitespace-nowrap" href="index.html#planos">
+                    Unlock the HUB
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="relative z-10 pt-40 pb-20">
+<div class="max-w-4xl mx-auto px-6 relative z-10">
+<!-- Header -->
+<div class="text-center mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm text-xs text-orange-400 mb-6 gsap-reveal hero-stagger">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="font-medium uppercase tracking-wider">The Power of Knowledge</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bricolage font-light tracking-tight mb-8 gsap-reveal hero-stagger">
+                    Onde a <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500 font-medium">Tradition</span> Encontra o Futuro.
+                </h1>
+</div>
+<!-- Content -->
+<div class="prose prose-invert prose-orange max-w-none font-sans text-neutral-400 leading-relaxed space-y-8" id="sobre-conteudo">
+<p class="text-lg md:text-xl text-neutral-300 font-light">
+                    In metallurgy, we learn that nothing takes shape without the right heat and pressure. But in today's market, the true fuel for your transformation is not electricity or oil and gas: <strong class="text-white font-medium">it is knowledge.</strong>
+</p>
+<p>
+                    Welcome to the first digital platform dedicated to excellence in metallurgy and the foundry value chain. We are here to break away from traditional models and deliver the future into your hands.
+                </p>
+<div class="p-8 rounded-[24px] bg-[#0A0A0A]/60 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(249,115,22,0.05)] electric-card relative overflow-hidden my-12">
+<div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent z-0 pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="text-2xl text-white font-bricolage font-medium mb-6 flex items-center gap-3">
+<span class="text-2xl">💡</span> Why invest in yourself today?
+                        </h2>
+<p class="mb-6">Many people confuse "expense" with "investment". An expense drains away; an investment multiplies.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center shrink-0 mt-0.5"><span class="w-2 h-2 rounded-full bg-orange-500"></span></div>
+<div><strong class="text-white font-medium">The value you generate is proportional to what you know:</strong> On the factory floor or in management, those who master technical skills master opportunities.</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center shrink-0 mt-0.5"><span class="w-2 h-2 rounded-full bg-orange-500"></span></div>
+<div><strong class="text-white font-medium">Potential Return:</strong> A specialized course is not just a certificate; it is the key to a new position, a stronger salary negotiation, or founding your own business. Every technique learned is another step toward the career you envision.</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center shrink-0 mt-0.5"><span class="w-2 h-2 rounded-full bg-orange-500"></span></div>
+<div><strong class="text-white font-medium">Dignity Through Mastery:</strong> Learning is the only way to stop being just a cog in the wheel and become the one shaping the future of the industry.</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="my-12">
+<h2 class="text-2xl text-white font-bricolage font-medium mb-6 flex items-center gap-3">
+<span class="text-2xl">🚀</span> What makes us disruptive?
+                    </h2>
+<p class="mb-6">We are not just "video lectures". We are an immersive experience:</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div><strong class="text-white font-medium">Total Immersion (VR-MyMetalHub):</strong> Step inside the heart of the foundry without leaving home. Feel the scale, understand the process, live the experience.</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div><strong class="text-white font-medium">Real Connection:</strong> An exclusive member area for networking and forums. Your next major career leap could start in a colleague's comment.</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div><strong class="text-white font-medium">Geographical Freedom:</strong> At your pace, on your time, on your phone, laptop, or tablet. Knowledge is now portable.</div>
+</li>
+</ul>
+</div>
+<div class="my-16 py-8 border-y border-white/10 text-center">
+<p class="text-2xl font-bricolage font-light text-white/90 italic leading-relaxed">
+                        "Metal only becomes valuable after passing through fire. A professional only becomes indispensable after passing through learning."
+                    </p>
+</div>
+<p>
+                    Don't wait for the market to change for you to change. Shape your own story. Transform effort into strategy, sweat into intelligence, and technique into prosperity.
+                </p>
+<p class="text-xl text-white font-bricolage font-medium mt-8 text-center bg-white/5 py-6 px-4 rounded-xl border border-white/10">
+                    MyMetalHub: Transforming metal into value, and people into leaders.
+                </p>
+</div>
+</div>
+</main>
+<!-- 3. MISSION, VISION & VALUES -->
+<section class="relative z-10 py-24 border-t border-white/5 bg-[#030303]" id="fundamentos">
+<div class="max-w-6xl mx-auto px-6">
+<!-- Section Header -->
+<div class="text-center mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-orange-500/20 bg-orange-500/10 backdrop-blur-sm text-xs text-orange-400 mb-6 gsap-fund-stagger">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+<span class="font-medium uppercase tracking-wider font-sans">Our Core Pillars</span>
+</div>
+<h2 class="text-4xl md:text-5xl text-white font-bricolage font-light tracking-tight mb-4 gsap-fund-stagger">
+                    Direction, Purpose, and <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500 font-medium">Solidified Values.</span>
+</h2>
+<p class="text-lg text-neutral-400 font-sans font-light max-w-2xl mx-auto gsap-fund-stagger">
+                    The foundation upon which we structure high-level metallurgical education to shape industry leaders.
+                </p>
+</div>
+<!-- Mission & Vision (2-column layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+<!-- Vision Card -->
+<div class="group relative rounded-[28px] p-[1px] overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-neutral-900/50 hover:bg-gradient-to-br hover:from-orange-500/20 hover:to-transparent gsap-fund-stagger">
+<div class="absolute inset-0 bg-gradient-to-b from-orange-500/10 via-transparent to-transparent opacity-30 z-0"></div>
+<div class="relative z-10 bg-[#0A0A0A]/90 rounded-[26px] p-8 md:p-10 h-full flex flex-col justify-between border border-white/5 group-hover:border-transparent transition-all">
+<div>
+<div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500 shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-4">Vision</h3>
+<p class="text-neutral-400 font-sans font-light text-base leading-relaxed">
+                                To be the premier international hub for technical and managerial knowledge in foundry, metallurgy, and industrial management, contributing decisively to enhancing competitiveness, efficiency, and innovation.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Mission Card -->
+<div class="group relative rounded-[28px] p-[1px] overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-neutral-900/50 hover:bg-gradient-to-br hover:from-amber-500/20 hover:to-transparent gsap-fund-stagger">
+<div class="absolute inset-0 bg-gradient-to-b from-amber-500/10 via-transparent to-transparent opacity-30 z-0"></div>
+<div class="relative z-10 bg-[#0A0A0A]/90 rounded-[26px] p-8 md:p-10 h-full flex flex-col justify-between border border-white/5 group-hover:border-transparent transition-all">
+<div>
+<div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500 shadow-[0_0_15px_rgba(245,158,11,0.1)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-4">Mission</h3>
+<p class="text-neutral-400 font-sans font-light text-base leading-relaxed">
+                                To develop and disseminate technical training and educational solutions of excellence, delivering specialized content that elevates the performance of professionals and companies, promoting continuous improvement, operational precision, and qualified decision-making.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Valores (3-column grid for the 6 values) -->
+<div>
+<h3 class="text-2xl md:text-3xl text-white font-bricolage font-medium mb-10 text-center flex items-center justify-center gap-3 gsap-fund-stagger">
+<span class="text-orange-500">🛡️</span> Our Core Values
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Valor 1 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">01</span>
+<h4 class="text-lg text-white font-medium">Technical Excellence</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Commitment to rigor, depth, and continuous updating of offered content.
+                        </p>
+</div>
+<!-- Valor 2 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">02</span>
+<h4 class="text-lg text-white font-medium">Integrity &amp; Transparency</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Ethical conduct and clear communication in all interactions.
+                        </p>
+</div>
+<!-- Valor 3 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">03</span>
+<h4 class="text-lg text-white font-medium">Innovation &amp; Continuous Improvement</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Constant pursuit of methods, technologies, and practices that elevate training quality.
+                        </p>
+</div>
+<!-- Valor 4 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">04</span>
+<h4 class="text-lg text-white font-medium">Client Focus</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Deep understanding of the needs of professionals and industrial companies, with result-oriented educational solutions.
+                        </p>
+</div>
+<!-- Valor 5 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">05</span>
+<h4 class="text-lg text-white font-medium">Industrial Impact</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Commitment to generating real transformations that increase productivity, competitiveness, and sustainability.
+                        </p>
+</div>
+<!-- Valor 6 -->
+<div class="group relative rounded-2xl bg-[#0A0A0A]/40 border border-white/5 p-6 hover:border-orange-500/30 transition-all duration-300 gsap-fund-stagger">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-3xl font-bricolage font-bold text-orange-500/25 group-hover:text-orange-500 transition-colors">06</span>
+<h4 class="text-lg text-white font-medium">Acessibilidade ao Conhecimento</h4>
+</div>
+<p class="text-sm text-neutral-400 font-sans font-light leading-relaxed">
+                            Promoting inclusive educational opportunities and easy access to technical content.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative z-10 bg-[#020202] pt-20 pb-8 border-t border-orange-500/20 mt-12">
+<!-- Glowing line effect separating from above -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent shadow-[0_0_20px_rgba(249,115,22,0.8)]"></div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] max-w-md h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent blur-[2px]"></div>
+<!-- Background subtle glow -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-600/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Brand & Contact -->
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/10 to-orange-900/10 border border-orange-500/20 p-0.5">
+<img alt="MyMetalHUB Logo" class="w-full h-full object-contain" src="../assets/images/mymetalhub_logo.png"/>
+</div>
+<span class="text-2xl text-white font-bricolage font-medium">MyMetal<span class="text-[#FF8128]">HUB</span></span>
+</div>
+<p class="text-neutral-400 font-sans text-sm mb-8 max-w-sm leading-relaxed">
+                        The definitive platform for foundry professionals who wish to master the shop floor through scientific grounding.
+                    </p>
+<div class="flex flex-col gap-3 text-sm text-neutral-400 font-sans">
+<span class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+<svg class="w-4 h-4 text-orange-500/80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+                            Support: mymetalhub@mymetalhub.com
+                        </span>
+</div>
+</div>
+<!-- Links -->
+<div>
+<h4 class="text-white font-bricolage font-medium mb-6">Institutional</h4>
+<ul class="space-y-4 font-sans text-sm">
+<li><a class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2" href="sobre-nos.html"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> About Us</a></li>
+<li><a class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2" href="index.html#quem-ensina"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Our Instructors</a></li>
+<li><a class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2" href="../assets/docs/Politica%20Privacidade%20Mymetalhub%20LGPD.pdf" target="_blank"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Privacy Policy</a></li>
+<li><a class="text-neutral-400 hover:text-orange-400 transition-colors flex items-center gap-2" href="../assets/docs/TERMOS%20DE%20USO%20DA%20PLATAFORMA%20MYMETALHUB.pdf" target="_blank"><svg class="w-3 h-3 text-orange-500/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Terms of Use</a></li>
+</ul>
+</div>
+<!-- Socials -->
+<div>
+<h4 class="text-white font-bricolage font-medium mb-6">Social Media</h4>
+<p class="text-neutral-400 font-sans text-sm mb-4">Follow technical updates and daily insights.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all" href="https://www.instagram.com/mymetalhub_/" rel="noopener noreferrer" target="_blank">
+<!-- Instagram Icon -->
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all" href="https://www.youtube.com/watch?v=0jCTm8GdZG4" rel="noopener noreferrer" target="_blank">
+<!-- YouTube Icon -->
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all" href="https://www.linkedin.com/company/mymetalhub/about/?viewAsMember=true" rel="noopener noreferrer" target="_blank">
+<!-- LinkedIn Icon -->
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Divider & Copyright -->
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 font-sans text-xs text-neutral-500">
+<div class="flex items-center gap-3">
+<div class="relative flex items-center bg-white/[0.05] border border-white/10 rounded-full px-2.5 py-1 text-xs text-neutral-300 backdrop-blur-md">
+<svg class="w-3.5 h-3.5 text-orange-400 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<select aria-label="Selecionar Idioma no Rodapé" class="mymetalhub-lang-selector bg-transparent text-white text-xs border-none outline-none cursor-pointer pr-1">
+<option class="bg-neutral-900 text-white" value="pt-BR">PT-BR</option>
+<option class="bg-neutral-900 text-white" value="en">EN</option>
+</select>
+</div>
+<p>© 2026 MyMetalHUB. All rights reserved.</p>
+</div>
+<p>Built for the metallurgy elite.</p>
+</div>
+</div>
+</footer>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

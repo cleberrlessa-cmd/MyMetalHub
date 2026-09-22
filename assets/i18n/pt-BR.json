@@ -1,0 +1,32 @@
+{
+  "lang": "pt-BR",
+  "nav": {
+    "home": "Home",
+    "sobre": "Sobre nós",
+    "empresas": "Soluções para Empresas",
+    "formacoes": "Formações",
+    "cta": "Desbloquear o HUB"
+  },
+  "cookie_banner": {
+    "title": "Controle de Cookies",
+    "description": "Utilizamos cookies essenciais para otimizar sua experiência e analisar nosso tráfego em conformidade com as melhores práticas de privacidade e proteção de dados.",
+    "reject": "Recusar",
+    "accept": "Aceitar Todos"
+  },
+  "b2b_modal": {
+    "title": "Falar com Especialista",
+    "subtitle": "Preencha o formulário abaixo para receber um diagnóstico de treinamento corporativo para sua empresa.",
+    "field_subject": "Assunto / Necessidade",
+    "field_email": "Seu E-mail Corporativo",
+    "field_phone": "Telefone / WhatsApp",
+    "field_message": "Detalhes da Necessidade",
+    "btn_submit": "Enviar Mensagem",
+    "btn_sending": "Enviando...",
+    "success_title": "Mensagem Enviada!",
+    "success_subtitle": "Recebemos sua solicitação sobre \"{subject}\". Nossa equipe técnica entrará em contato em breve.",
+    "btn_close": "Fechar"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

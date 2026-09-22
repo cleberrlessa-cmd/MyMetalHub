@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Glossário Técnico Especializado em Fundição e Metalurgia",
+    "description": "Dicionário de padronização terminológica técnica para garantia de consistência em traduções multilíngues.",
+    "languages": ["pt-BR", "en", "es"]
+  },
+  "terms": {
+    "fundicao": {
+      "pt-BR": "Fundição",
+      "en": "Foundry / Casting",
+      "es": "Fundición"
+    },
+    "metalurgia": {
+      "pt-BR": "Metalurgia",
+      "en": "Metallurgy",
+      "es": "Metalurgia"
+    },
+    "ferro_fundido_nodular": {
+      "pt-BR": "Ferro Fundido Nodular / Ductil",
+      "en": "Ductile Iron / Nodular Cast Iron",
+      "es": "Hierro Fundido Nodular / Dúctil"
+    },
+    "ferro_fundido_cinzento": {
+      "pt-BR": "Ferro Fundido Cinzento",
+      "en": "Gray Iron / Gray Cast Iron",
+      "es": "Hierro Fundido Gris"
+    },
+    "escoria": {
+      "pt-BR": "Escória",
+      "en": "Slag / Dross",
+      "es": "Escoria"
+    },
+    "inoculacao": {
+      "pt-BR": "Inoculação",
+      "en": "Inoculation",
+      "es": "Inoculación"
+    },
+    "nodulizacao": {
+      "pt-BR": "Nodulização",
+      "en": "Nodulization / Magnesium Treatment",
+      "es": "Nodulización"
+    },
+    "defeitos_de_fundicao": {
+      "pt-BR": "Defeitos de Fundição",
+      "en": "Casting Defects",
+      "es": "Defectos de Fundición"
+    },
+    "rechupo": {
+      "pt-BR": "Rechupo / Porosidade de Contração",
+      "en": "Shrinkage Porosity / Shrinkage Defect",
+      "es": "Rechupe / Porosidad de Contracción"
+    },
+    "porosidade_de_gas": {
+      "pt-BR": "Porosidade por Gás / Bolha",
+      "en": "Gas Porosity / Blowhole",
+      "es": "Porosidad por Gas / Sopladura"
+    },
+    "molde": {
+      "pt-BR": "Molde",
+      "en": "Mold",
+      "es": "Molde"
+    },
+    "macho": {
+      "pt-BR": "Macho de Areia",
+      "en": "Sand Core",
+      "es": "Macho de Arena / Corazón"
+    },
+    "vazamento": {
+      "pt-BR": "Vazamento / Lingotamento",
+      "en": "Pouring / Casting",
+      "es": "Vaciado / Colada"
+    },
+    "forno_de_inducao": {
+      "pt-BR": "Forno de Indução",
+      "en": "Induction Furnace",
+      "es": "Horno de Inducción"
+    },
+    "tratamento_termico": {
+      "pt-BR": "Tratamento Térmico",
+      "en": "Heat Treatment",
+      "es": "Tratamiento Térmico"
+    },
+    "microestrutura": {
+      "pt-BR": "Microestrutura",
+      "en": "Microstructure",
+      "es": "Microestructura"
+    },
+    "areia_de_fundicao": {
+      "pt-BR": "Areia de Fundição / Areia Verde",
+      "en": "Foundry Sand / Green Sand",
+      "es": "Arena de Fundición / Arena Verde"
+    },
+    "rendimento_metalurgico": {
+      "pt-BR": "Rendimento Metalúrgico / Rendimento do Molde",
+      "en": "Casting Yield",
+      "es": "Rendimiento de Metal / Colada"
+    },
+    "analise_termica": {
+      "pt-BR": "Análise Térmica",
+      "en": "Thermal Analysis",
+      "es": "Análisis Térmico"
+    }
+  }
+}

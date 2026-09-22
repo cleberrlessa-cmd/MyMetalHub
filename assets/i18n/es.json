@@ -1,0 +1,32 @@
+{
+  "lang": "es",
+  "nav": {
+    "home": "Inicio",
+    "sobre": "Sobre Nosotros",
+    "empresas": "Soluciones Corporativas",
+    "formacoes": "Formaciones y Cursos",
+    "cta": "Desbloquear el HUB"
+  },
+  "cookie_banner": {
+    "title": "Control de Cookies",
+    "description": "Utilizamos cookies esenciales para optimizar su experiencia y analizar nosso tráfico de acuerdo con las melhores prácticas de privacidad.",
+    "reject": "Rechazar",
+    "accept": "Aceptar Todos"
+  },
+  "b2b_modal": {
+    "title": "Hablar con un Especialista",
+    "subtitle": "Complete el formulario para recibir un diagnóstico de capacitación corporativa para su empresa.",
+    "field_subject": "Asunto / Necesidad",
+    "field_email": "Correo Corporativo",
+    "field_phone": "Teléfono / WhatsApp",
+    "field_message": "Detalles de la Solicitud",
+    "btn_submit": "Enviar Mensaje",
+    "btn_sending": "Enviando...",
+    "success_title": "¡Mensaje Enviado!",
+    "success_subtitle": "Hemos recibido su solicitud sobre \"{subject}\". Nuestro equipo se pondrá en contacto a la brevedad.",
+    "btn_close": "Cerrar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}
