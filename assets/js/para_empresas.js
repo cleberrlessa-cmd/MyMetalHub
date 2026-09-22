@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.style.opacity = '1';
         }
-        if (submitText) submitText.textContent = 'Enviar Mensagem';
+        if (submitText) submitText.textContent = 'Send Message';
         if (submitIcon) submitIcon.classList.remove('hidden');
     }
 
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.7';
             }
-            if (submitText) submitText.textContent = 'Enviando...';
+            if (submitText) submitText.textContent = 'Sending...';
             if (submitIcon) submitIcon.classList.add('hidden');
             
             // Envia para o Web3Forms de verdade
@@ -264,23 +264,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     console.log(response);
-                    alert(json.message || 'Erro ao enviar. Tente novamente mais tarde.');
+                    alert(json.message || 'Failed to send. Please try again later.');
                     if (submitBtn) {
                         submitBtn.disabled = false;
                         submitBtn.style.opacity = '1';
                     }
-                    if (submitText) submitText.textContent = 'Enviar Mensagem';
+                    if (submitText) submitText.textContent = 'Send Message';
                     if (submitIcon) submitIcon.classList.remove('hidden');
                 }
             })
             .catch(error => {
                 console.log(error);
-                alert('Erro de conexão. Verifique sua rede e tente novamente.');
+                alert('Connection error. Please check your network and try again.');
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '1';
                 }
-                if (submitText) submitText.textContent = 'Enviar Mensagem';
+                if (submitText) submitText.textContent = 'Send Message';
                 if (submitIcon) submitIcon.classList.remove('hidden');
             });
         });
