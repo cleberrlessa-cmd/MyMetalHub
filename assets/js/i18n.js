@@ -7,21 +7,19 @@
     const DEFAULT_LANG = 'pt-BR';
     const STORAGE_KEY = 'mymetalhub_lang';
 
-    // Determina o idioma atual a partir da URL ou localStorage
+    // Determina o idioma atual a partir da rota ou do atributo lang do HTML
     function detectLanguage() {
-        const path = window.location.pathname;
-        if (path.includes('/en/') || path.endsWith('/en')) return 'en';
-        if (path.includes('/es/') || path.endsWith('/es')) return 'es';
-        if (path.includes('/pt/') || path.endsWith('/pt')) return 'pt-BR';
+        const path = window.location.pathname.toLowerCase();
+        if (path.includes('/en/') || path.endsWith('/en') || path.endsWith('/en/index.html')) return 'en';
+        if (path.includes('/es/') || path.endsWith('/es') || path.endsWith('/es/index.html')) return 'es';
+        if (path.includes('/pt/') || path.endsWith('/pt') || path.endsWith('/pt/index.html')) return 'pt-BR';
 
-        const savedLang = localStorage.getItem(STORAGE_KEY);
-        if (savedLang && SUPPORTED_LANGS.includes(savedLang)) {
-            return savedLang;
+        // Verifica a tag html lang da página atual (ex.: pt-BR na raiz)
+        const htmlLang = document.documentElement.getAttribute('lang');
+        if (htmlLang && SUPPORTED_LANGS.includes(htmlLang)) {
+            return htmlLang;
         }
 
-        const navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-        if (navLang.startsWith('en')) return 'en';
-        if (navLang.startsWith('es')) return 'es';
         return DEFAULT_LANG;
     }
 
@@ -77,11 +75,17 @@
         window.location.href = newHref;
     }
 
-    // Inicialização ao carregar o DOM
-    document.addEventListener('DOMContentLoaded', () => {
+    function init() {
+        currentLang = detectLanguage();
         setLanguage(currentLang);
         bindLanguageSelectors();
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 
     function bindLanguageSelectors() {
         const selectors = document.querySelectorAll('.mymetalhub-lang-selector');

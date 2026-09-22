@@ -126,3 +126,180 @@ html, body {
             50% { transform: scale(1.2) translate(50px, -50px) rotate(10deg); opacity: 0.5; filter: blur(120px); }
             100% { transform: scale(1) translate(-50px, 50px) rotate(-10deg); opacity: 0.3; filter: blur(100px); }
         }
+
+        /* ==========================================================================
+           Floating WhatsApp Hub Retractable Pill Button
+           ========================================================================== */
+        .hub-floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 990;
+            display: flex;
+            align-items: center;
+            background: rgba(20, 21, 26, 0.94);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(37, 211, 102, 0.35);
+            border-radius: 9999px;
+            padding: 8px 10px;
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 20px rgba(37, 211, 102, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hub-floating-whatsapp:hover,
+        .hub-floating-whatsapp:focus-visible,
+        .hub-floating-whatsapp.is-expanded {
+            border-color: #25D366;
+            background: rgba(24, 26, 32, 0.98);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 28px rgba(37, 211, 102, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .hub-whatsapp-icon-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hub-floating-whatsapp:hover .hub-whatsapp-icon-wrap,
+        .hub-floating-whatsapp.is-expanded .hub-whatsapp-icon-wrap {
+            background: rgba(37, 211, 102, 0.22);
+            transform: scale(1.05);
+            box-shadow: 0 0 14px rgba(37, 211, 102, 0.4);
+        }
+
+        .hub-whatsapp-svg {
+            width: 25px;
+            height: 25px;
+            fill: #25D366;
+            filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.85));
+            transition: filter 0.3s ease;
+        }
+
+        /* Notification Badge */
+        .hub-whatsapp-badge {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ef4444;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+            border: 2px solid #14151a;
+            z-index: 2;
+        }
+
+        .hub-whatsapp-badge-ping {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ef4444;
+            opacity: 0.75;
+            animation: hub-badge-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes hub-badge-ping {
+            0% { transform: scale(1); opacity: 0.8; }
+            75%, 100% { transform: scale(2.2); opacity: 0; }
+        }
+
+        /* Expanding Text Container */
+        .hub-whatsapp-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.35s ease;
+            margin-left: 0;
+            pointer-events: none;
+        }
+
+        .hub-floating-whatsapp:hover .hub-whatsapp-content,
+        .hub-floating-whatsapp:focus-visible .hub-whatsapp-content,
+        .hub-floating-whatsapp.is-expanded .hub-whatsapp-content {
+            max-width: 360px;
+            opacity: 1;
+            margin-left: 12px;
+            margin-right: 10px;
+            pointer-events: auto;
+        }
+
+        .hub-whatsapp-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hub-whatsapp-subtitle {
+            font-size: 11px;
+            color: #9ca3af;
+            line-height: 1.25;
+            margin-top: 2px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            .hub-floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                padding: 6px;
+            }
+            .hub-whatsapp-icon-wrap {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+            }
+            .hub-whatsapp-svg {
+                width: 25px;
+                height: 25px;
+            }
+            .hub-floating-whatsapp.is-expanded .hub-whatsapp-content {
+                max-width: 230px;
+                margin-left: 8px;
+                margin-right: 6px;
+                white-space: normal;
+            }
+            .hub-whatsapp-title {
+                font-size: 12px;
+            }
+            .hub-whatsapp-subtitle {
+                font-size: 10px;
+                line-height: 1.2;
+            }
+        }

@@ -669,3 +669,58 @@
                 checkDepoimentosVisibility();
             }
         })();
+
+        // ==========================================
+        // FLOATING WHATSAPP PILL BUTTON INTERACTION
+        // ==========================================
+        (function() {
+            function initWhatsAppFloatingBtn() {
+                const btn = document.querySelector('.hub-floating-whatsapp');
+                if (!btn) return;
+
+                let isTouchDevice = false;
+                let autoCloseTimer = null;
+
+                // Subtle attention-grabbing peek after page load
+                const autoPeekTimer = setTimeout(() => {
+                    btn.classList.add('is-expanded');
+                    autoCloseTimer = setTimeout(() => {
+                        btn.classList.remove('is-expanded');
+                    }, 4000);
+                }, 2500);
+
+                // Detect touch interaction
+                btn.addEventListener('touchstart', () => {
+                    isTouchDevice = true;
+                }, { passive: true });
+
+                btn.addEventListener('click', (e) => {
+                    clearTimeout(autoPeekTimer);
+                    if (isTouchDevice && !btn.classList.contains('is-expanded')) {
+                        // On mobile first tap: expand pill gracefully
+                        e.preventDefault();
+                        clearTimeout(autoCloseTimer);
+                        btn.classList.add('is-expanded');
+                        autoCloseTimer = setTimeout(() => {
+                            btn.classList.remove('is-expanded');
+                        }, 5000);
+                        return;
+                    }
+                    // On desktop or second mobile tap: opens WhatsApp destination
+                });
+
+                // Dismiss expansion when clicking/tapping outside
+                document.addEventListener('click', (e) => {
+                    if (!btn.contains(e.target) && btn.classList.contains('is-expanded')) {
+                        btn.classList.remove('is-expanded');
+                        clearTimeout(autoCloseTimer);
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initWhatsAppFloatingBtn);
+            } else {
+                initWhatsAppFloatingBtn();
+            }
+        })();
