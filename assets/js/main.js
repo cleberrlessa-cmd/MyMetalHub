@@ -614,15 +614,16 @@
         })();
 
         // ==========================================
-        // HERO METRICS SECTION (REAPARECE EM 01/10/2026)
+        // HERO METRICS SECTION (OCULTO ATÉ 30/11/2026)
         // ==========================================
         (function() {
             function checkMetricsVisibility() {
                 const metricsEl = document.getElementById('hero-metrics-section');
                 if (!metricsEl) return;
 
-                // Data de retorno: 01 de Outubro de 2026 (Mês 9 = Outubro no JS 0-indexed)
-                const targetDate = new Date(2026, 9, 1, 0, 0, 0);
+                // Data de retorno: 01 de Dezembro de 2026 (Mês 11 = Dezembro no JS 0-indexed)
+                // Permanece escondida até dia 30 de novembro de 2026
+                const targetDate = new Date(2026, 11, 1, 0, 0, 0);
                 const now = new Date();
 
                 if (now >= targetDate) {
