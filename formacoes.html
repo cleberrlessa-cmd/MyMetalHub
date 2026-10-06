@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -104,7 +104,6 @@
                         <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Disponivel
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Intermediário - Avançado</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
                     <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
@@ -119,18 +118,29 @@
                         Aprofunde a compreensão da fundição além do empírico: entenda a alimentação no molde, o preenchimento e a solidificação, tome decisões técnicas com base em dados e fatos concretos e científicos.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-500 font-sans">
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>9hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>12hs</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-5">
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-6">
                         <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover"></div>
                         <div><p class="text-white font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-500 font-sans text-xs">Especialista em Metalurgia</p></div>
                     </div>
-                    <!-- Bloco de Preço Elegante -->
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-                        <div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="flex flex-col sm:flex-row items-center gap-3 mb-4">
+                            <button type="button" onclick="openEmentaModal()" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/60 bg-gradient-to-b from-white/20 via-orange-500/15 to-neutral-900/90 hover:from-white/30 hover:via-orange-500/25 hover:to-neutral-900 text-white hover:text-orange-200 px-6 py-3.5 text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.35),inset_0_1px_2px_rgba(255,255,255,0.5)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6),inset_0_1px_3px_rgba(255,255,255,0.8)] ring-1 ring-inset ring-white/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                                <svg class="w-4 h-4 text-orange-300 group-hover/btn:text-white drop-shadow-[0_0_8px_rgba(251,146,60,0.9)] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                O que irei aprender?
+                            </button>
+                            <a href="https://www.asaas.com/c/dcoqlirpd3pjcm07" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        </div>
+                        <!-- Bloco de Preço Elegante -->
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                            <div>
                             <div class="text-[10px] uppercase font-bold tracking-widest text-neutral-400 flex items-center gap-1.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block shadow-[0_0_6px_rgba(251,146,60,0.8)]"></span>
                                 Investimento
@@ -147,16 +157,7 @@
                                 em até 6x R$ 191,16
                             </span>
                         </div>
-                    </div>
-                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
-                        <button type="button" onclick="openEmentaModal()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
-                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            O que irei aprender?
-                        </button>
-                        <a href="https://www.asaas.com/c/dcoqlirpd3pjcm07" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
-                            Desbloquear Acesso
-                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -171,7 +172,6 @@
                         <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Disponivel
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Básico - Intermediário</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
                     <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
@@ -187,13 +187,24 @@
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluido</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-5">
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-6">
                         <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_mauro.jpg" alt="Mauro Castro" class="w-full h-full object-cover" style="object-position:center top"></div>
                         <div><p class="text-white font-sans text-sm font-medium">Mauro F. Castro Moscoso</p><p class="text-neutral-500 font-sans text-xs">Especialista em Tratamentos Térmicos</p></div>
                     </div>
-                    <!-- Bloco de Preço Elegante -->
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-                        <div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="flex flex-col sm:flex-row items-center gap-3 mb-4">
+                            <button type="button" onclick="openEmentaModal2()" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/60 bg-gradient-to-b from-white/20 via-orange-500/15 to-neutral-900/90 hover:from-white/30 hover:via-orange-500/25 hover:to-neutral-900 text-white hover:text-orange-200 px-6 py-3.5 text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.35),inset_0_1px_2px_rgba(255,255,255,0.5)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6),inset_0_1px_3px_rgba(255,255,255,0.8)] ring-1 ring-inset ring-white/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                                <svg class="w-4 h-4 text-orange-300 group-hover/btn:text-white drop-shadow-[0_0_8px_rgba(251,146,60,0.9)] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                O que irei aprender?
+                            </button>
+                            <a href="https://www.asaas.com/c/y5lgtqksq1zj4c7m" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        </div>
+                        <!-- Bloco de Preço Elegante -->
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                            <div>
                             <div class="text-[10px] uppercase font-bold tracking-widest text-neutral-400 flex items-center gap-1.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block shadow-[0_0_6px_rgba(251,146,60,0.8)]"></span>
                                 Investimento
@@ -210,16 +221,7 @@
                                 em até 6x R$ 199,50
                             </span>
                         </div>
-                    </div>
-                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
-                        <button type="button" onclick="openEmentaModal2()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
-                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            O que irei aprender?
-                        </button>
-                        <a href="https://www.asaas.com/c/y5lgtqksq1zj4c7m" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
-                            Desbloquear Acesso
-                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -239,7 +241,6 @@
                         <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Disponivel
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Intermediário - Avançado</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
                     <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
@@ -254,18 +255,29 @@
                         Domine a solidificação e os parâmetros críticos da fundição para reduzir defeitos e produzir com mais qualidade, rendimento e eficiência.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-500 font-sans">
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>8hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>4hs</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-5">
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-6">
                         <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover"></div>
                         <div><p class="text-white font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-500 font-sans text-xs">Especialista em Metalurgia</p></div>
                     </div>
-                    <!-- Bloco de Preço Elegante -->
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-                        <div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="flex flex-col sm:flex-row items-center gap-3 mb-4">
+                            <button type="button" onclick="openEmentaModal3()" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/60 bg-gradient-to-b from-white/20 via-orange-500/15 to-neutral-900/90 hover:from-white/30 hover:via-orange-500/25 hover:to-neutral-900 text-white hover:text-orange-200 px-6 py-3.5 text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.35),inset_0_1px_2px_rgba(255,255,255,0.5)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6),inset_0_1px_3px_rgba(255,255,255,0.8)] ring-1 ring-inset ring-white/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                                <svg class="w-4 h-4 text-orange-300 group-hover/btn:text-white drop-shadow-[0_0_8px_rgba(251,146,60,0.9)] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                O que irei aprender?
+                            </button>
+                            <a href="https://www.asaas.com/000/c/12p6t4elmmf18gfb" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        </div>
+                        <!-- Bloco de Preço Elegante -->
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                            <div>
                             <div class="text-[10px] uppercase font-bold tracking-widest text-neutral-400 flex items-center gap-1.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block shadow-[0_0_6px_rgba(251,146,60,0.8)]"></span>
                                 Investimento
@@ -282,16 +294,7 @@
                                 em até 3x R$ 119,46
                             </span>
                         </div>
-                    </div>
-                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
-                        <button type="button" onclick="openEmentaModal3()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
-                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            O que irei aprender?
-                        </button>
-                        <a href="https://www.asaas.com/000/c/12p6t4elmmf18gfb" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
-                            Desbloquear Acesso
-                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -307,7 +310,6 @@
                         <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
                         Disponivel
                     </div>
-                    <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full border border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md text-xs text-neutral-300 font-medium">Intermediário - Avançado</div>
                 </div>
                 <div class="flex flex-col flex-1 p-8 md:p-10 relative z-10">
                     <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border border-orange-500/20 bg-orange-500/10 text-xs text-orange-400 mb-4 w-fit">
@@ -322,18 +324,29 @@
                         Aprenda a projetar sistemas de alimentação e enchimento e aplicar uma metodologia completa para projetos de fundição eficientes.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-8 text-xs text-neutral-500 font-sans">
-                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>12hs</span>
+                        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>8hs</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Videoaulas em HD</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Imersão VR</span>
                         <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-orange-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Certificado incluído</span>
                     </div>
-                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-5">
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/5 mb-6">
                         <div class="w-10 h-10 rounded-full overflow-hidden border border-orange-500/30 shrink-0"><img src="assets/images/mestre_hefestus.jpg" alt="Hefestus Metal" class="w-full h-full object-cover"></div>
                         <div><p class="text-white font-sans text-sm font-medium">Hefestus Metal</p><p class="text-neutral-500 font-sans text-xs">Especialista em Metalurgia</p></div>
                     </div>
-                    <!-- Bloco de Preço Elegante -->
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-                        <div>
+                    <div class="mt-auto pt-4 border-t border-white/5">
+                        <div class="flex flex-col sm:flex-row items-center gap-3 mb-4">
+                            <button type="button" onclick="openEmentaModal4()" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/60 bg-gradient-to-b from-white/20 via-orange-500/15 to-neutral-900/90 hover:from-white/30 hover:via-orange-500/25 hover:to-neutral-900 text-white hover:text-orange-200 px-6 py-3.5 text-sm font-semibold shadow-[0_0_25px_rgba(249,115,22,0.35),inset_0_1px_2px_rgba(255,255,255,0.5)] hover:shadow-[0_0_40px_rgba(249,115,22,0.6),inset_0_1px_3px_rgba(255,255,255,0.8)] ring-1 ring-inset ring-white/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                                <svg class="w-4 h-4 text-orange-300 group-hover/btn:text-white drop-shadow-[0_0_8px_rgba(251,146,60,0.9)] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                O que irei aprender?
+                            </button>
+                            <a href="https://www.asaas.com/000/c/tunblgalvuksouby" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
+                            Desbloquear Acesso
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        </div>
+                        <!-- Bloco de Preço Elegante -->
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-orange-500/[0.08] via-neutral-900/50 to-neutral-900/80 border border-orange-500/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                            <div>
                             <div class="text-[10px] uppercase font-bold tracking-widest text-neutral-400 flex items-center gap-1.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block shadow-[0_0_6px_rgba(251,146,60,0.8)]"></span>
                                 Investimento
@@ -350,16 +363,7 @@
                                 em até 3x R$ 272,95
                             </span>
                         </div>
-                    </div>
-                    <div class="mt-auto flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-white/5">
-                        <button type="button" onclick="openEmentaModal4()" class="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 hover:text-white px-6 py-3.5 text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)] cursor-pointer">
-                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            O que irei aprender?
-                        </button>
-                        <a href="https://www.asaas.com/000/c/tunblgalvuksouby" target="_blank" rel="noopener noreferrer" class="group/btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-t from-yellow-200 via-orange-400 to-orange-500 px-6 py-3.5 text-sm font-semibold text-[#2c1306] shadow-[0_0_30px_-5px_rgba(249,115,22,0.5)] ring-1 ring-inset ring-white/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_50px_-5px_rgba(249,115,22,0.7)] text-center">
-                            Desbloquear Acesso
-                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -1809,3 +1813,4 @@
 </script>
 </body>
 </html>
+
