@@ -1527,6 +1527,15 @@ Unlock Access
             closeEmentaModal4();
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const ementa = params.get('ementa');
+        if (ementa === '1') openEmentaModal();
+        else if (ementa === '2') openEmentaModal2();
+        else if (ementa === '3') openEmentaModal3();
+        else if (ementa === '4') openEmentaModal4();
+    });
 </script>
 </body>
 </html>
