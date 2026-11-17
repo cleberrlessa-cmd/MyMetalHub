@@ -1535,6 +1535,34 @@ Unlock Access
         else if (ementa === '2') openEmentaModal2();
         else if (ementa === '3') openEmentaModal3();
         else if (ementa === '4') openEmentaModal4();
+
+        // Header Scroll & Mobile Auto-Hide on Scroll Down
+        let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener('scroll', () => {
+            const currentScroll = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+            const header = document.getElementById('header');
+            if (!header) return;
+
+            if (currentScroll > 20) {
+                header.classList.add('py-2', 'bg-[#050505]/90', 'shadow-[0_4px_30px_rgba(0,0,0,0.5)]', 'border-white/10');
+                header.classList.remove('py-4', 'bg-[#050505]/70', 'border-white/5');
+            } else {
+                header.classList.add('py-4', 'bg-[#050505]/70', 'border-white/5');
+                header.classList.remove('py-2', 'bg-[#050505]/90', 'shadow-[0_4px_30px_rgba(0,0,0,0.5)]', 'border-white/10');
+            }
+
+            if (window.innerWidth < 768) {
+                if (currentScroll > 60 && currentScroll > lastScrollY + 5) {
+                    header.classList.add('header-hidden-mobile');
+                } else if (currentScroll < lastScrollY - 5 || currentScroll <= 20) {
+                    header.classList.remove('header-hidden-mobile');
+                }
+            } else {
+                header.classList.remove('header-hidden-mobile');
+            }
+
+            lastScrollY = currentScroll;
+        }, { passive: true });
     });
 </script>
 </body>

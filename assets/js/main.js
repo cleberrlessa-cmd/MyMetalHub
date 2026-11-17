@@ -104,10 +104,13 @@
                 ease: "power2.out"
             }, "-=1.5");
 
-            // Header Scroll Effect
+            // Header Scroll Effect & Mobile Auto-Hide on Scroll Down
+            let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
             window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
+                const currentScroll = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
                 const header = document.getElementById('header');
+                if (!header) return;
 
                 // Toggle padding, background, and shadow based on scroll position
                 if (currentScroll > 20) {
@@ -117,7 +120,29 @@
                     header.classList.add('py-4', 'bg-[#050505]/70', 'border-white/5');
                     header.classList.remove('py-2', 'bg-[#050505]/90', 'shadow-[0_4px_30px_rgba(0,0,0,0.5)]', 'border-white/10');
                 }
-            });
+
+                // Apenas em telas móveis (< 768px):
+                // Ao rolar para baixo, oculta o cabeçalho para liberar espaço de tela;
+                // Ao rolar para cima ou próximo ao topo, reexibe suavemente.
+                if (window.innerWidth < 768) {
+                    if (currentScroll > 60 && currentScroll > lastScrollY + 5) {
+                        header.classList.add('header-hidden-mobile');
+                    } else if (currentScroll < lastScrollY - 5 || currentScroll <= 20) {
+                        header.classList.remove('header-hidden-mobile');
+                    }
+                } else {
+                    header.classList.remove('header-hidden-mobile');
+                }
+
+                lastScrollY = currentScroll;
+            }, { passive: true });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    const header = document.getElementById('header');
+                    if (header) header.classList.remove('header-hidden-mobile');
+                }
+            }, { passive: true });
 
             // Section 2 (Sobre o Curso) Scroll Animations
             const sec2Tl = gsap.timeline({
