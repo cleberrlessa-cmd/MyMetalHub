@@ -346,7 +346,12 @@ html, body {
                 transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, padding 0.3s ease;
                 will-change: transform;
             }
+            /* Cabeçalho preso ao topo do site (não acompanha a rolagem) no celular */
+            #header,
             #header.header-hidden-mobile {
-                transform: translateY(-110%);
+                position: absolute !important;
+                transform: none;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
             }
         }
