@@ -221,8 +221,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (form) {
+        // Campo invisível anti-robô (honeypot) suportado pelo Web3Forms.
+        // Humanos não veem nem marcam; robôs que preenchem tudo acabam marcando.
+        const botcheck = document.createElement('input');
+        botcheck.type = 'checkbox';
+        botcheck.name = 'botcheck';
+        botcheck.id = 'modal-botcheck';
+        botcheck.tabIndex = -1;
+        botcheck.setAttribute('autocomplete', 'off');
+        botcheck.setAttribute('aria-hidden', 'true');
+        botcheck.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;';
+        form.appendChild(botcheck);
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Robô detectado: finge sucesso e não envia nada
+            if (botcheck.checked) {
+                if (formContainer && successContainer) {
+                    formContainer.classList.add('hidden');
+                    successContainer.classList.remove('hidden');
+                }
+                return;
+            }
             const titleVal = titleInput.value.trim();
             const emailVal = document.getElementById('modal-email')?.value.trim() || '';
             const phoneVal = document.getElementById('modal-phone')?.value.trim() || '';
@@ -249,7 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     email: emailVal,
                     phone: phoneVal,
                     message: messageVal,
-                    title: titleVal
+                    title: titleVal,
+                    botcheck: botcheck.checked
                 })
             })
             .then(async (response) => {
