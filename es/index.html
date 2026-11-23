@@ -3200,7 +3200,7 @@
         },
         2: {
             titulo: "Tratamentos Térmicos – Fundamentos e Tipos de Tratamentos",
-            embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            embedUrl: "https://www.youtube.com/embed/CKCg6y1B7nA?si=1LB9GijM5QzMHgZ2"
         },
         3: {
             titulo: "Solidificação e Fundição Eficiente: Qualidade e Menos Defeitos",
@@ -3261,6 +3261,30 @@
             }
         }
     }
+
+    function _toggleEmenta(n, open) {
+        const s = n > 1 ? n : '';
+        const modal = document.getElementById('modalEmenta' + s);
+        const box = document.getElementById('modalBox' + s);
+        if (!modal || !box) return;
+        modal.classList.toggle('opacity-0', !open);
+        modal.classList.toggle('pointer-events-none', !open);
+        modal.classList.toggle('opacity-100', open);
+        box.classList.toggle('scale-95', !open);
+        box.classList.toggle('scale-100', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+    function openEmentaModal(n) { _toggleEmenta(n || 1, true); }
+    function closeEmentaModal(n) {
+        if (n) return _toggleEmenta(n, false);
+        document.querySelectorAll('[id^="modalEmenta"]').forEach(m => _toggleEmenta(Number(m.id.replace('modalEmenta','')) || 1, false));
+    }
+    function openEmentaModal2() { _toggleEmenta(2, true); }
+    function closeEmentaModal2() { _toggleEmenta(2, false); }
+    function openEmentaModal3() { _toggleEmenta(3, true); }
+    function closeEmentaModal3() { _toggleEmenta(3, false); }
+    function openEmentaModal4() { _toggleEmenta(4, true); }
+    function closeEmentaModal4() { _toggleEmenta(4, false); }
 
     function closeAulaGratisModal() {
         const modal = document.getElementById('modalAulaGratis');

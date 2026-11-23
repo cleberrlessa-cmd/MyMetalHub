@@ -17,6 +17,34 @@
         }
         requestAnimationFrame(raf);
 
+        // Rolagem dentro de modais/áreas roláveis: o scroll do mouse fica preso ao conteúdo
+        // aberto (não rola a página por trás) e o Lenis é pausado enquanto um modal está visível.
+        (function () {
+            const stop = (e) => e.stopPropagation();
+            const bindScrollAreas = () => {
+                document.querySelectorAll('.overflow-y-auto, .overflow-auto, [data-lenis-prevent]').forEach((el) => {
+                    if (el.dataset.scrollBound) return;
+                    el.dataset.scrollBound = '1';
+                    el.setAttribute('data-lenis-prevent', '');
+                    el.style.overscrollBehavior = 'contain';
+                    el.addEventListener('wheel', stop, { passive: true });
+                    el.addEventListener('touchmove', stop, { passive: true });
+                });
+            };
+            const syncLenis = () => {
+                const anyOpen = Array.from(document.querySelectorAll('[id^="modalEmenta"], #modalAulaGratis'))
+                    .some((m) => !m.classList.contains('pointer-events-none'));
+                anyOpen ? lenis.stop() : lenis.start();
+            };
+            const init = () => {
+                bindScrollAreas();
+                document.querySelectorAll('[id^="modalEmenta"], #modalAulaGratis').forEach((m) =>
+                    new MutationObserver(syncLenis).observe(m, { attributes: true, attributeFilter: ['class'] })
+                );
+            };
+            document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+        })();
+
         // GSAP Animations
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
